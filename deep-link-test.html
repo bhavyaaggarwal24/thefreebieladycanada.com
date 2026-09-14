@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Deep-link test — thefreebieladycanada</title>
+<style>
+  :root{
+    --ink:#1A1618; --soft:#4A382E; --bg:#F7F4F2;
+    --magenta:#FF2D95; --orange:#FF8A3A; --yellow:#FFD842;
+    --band-ink:#110E10;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:24px 20px 40px; text-align:center;
+  }
+  .test-banner{
+    position:sticky; top:0; width:100%; max-width:480px;
+    background:var(--band-ink); color:#fff; font-size:12px; font-weight:600;
+    letter-spacing:.04em; padding:8px 14px; border-radius:10px; margin-bottom:28px;
+  }
+  .card{width:100%; max-width:420px;}
+  .handle{font-weight:700; font-size:15px; color:var(--soft); margin-bottom:6px;}
+  h1{font-size:22px; margin:0 0 6px;}
+  .product{font-size:14px; color:var(--soft); margin-bottom:28px; word-break:break-word;}
+  .btn{
+    display:block; width:100%; padding:18px 16px; border-radius:14px;
+    font-size:17px; font-weight:700; text-decoration:none; border:none;
+    cursor:pointer; margin-bottom:14px;
+    background:linear-gradient(90deg,var(--magenta),var(--orange),var(--yellow));
+    color:var(--band-ink);
+  }
+  .btn:active{opacity:.85;}
+  .secondary{
+    display:block; width:100%; padding:14px 16px; border-radius:14px;
+    font-size:15px; font-weight:600; text-decoration:none;
+    background:#fff; color:var(--ink); border:1.5px solid #e2ddd9;
+  }
+  .status{font-size:13px; color:var(--soft); min-height:18px; margin:14px 0 24px;}
+  .raw{
+    font-size:12px; color:var(--soft); background:#fff; border:1px solid #e2ddd9;
+    border-radius:10px; padding:10px 12px; word-break:break-all; text-align:left;
+    margin-bottom:22px;
+  }
+  .autonote{font-size:12px; color:var(--soft); margin:-2px 0 14px;}
+  .disclosure{font-size:12px; color:var(--soft); line-height:1.5; max-width:380px;}
+  .howto{
+    max-width:420px; text-align:left; font-size:13px; color:var(--soft);
+    line-height:1.6; margin-top:34px; border-top:1px solid #e2ddd9; padding-top:18px;
+  }
+  .howto b{color:var(--ink);}
+</style>
+</head>
+<body>
+
+  <div class="test-banner">TEST PAGE · not linked from the site · manual checking only</div>
+
+  <div class="card">
+    <div class="handle">@thefreebieladycanada</div>
+    <h1>Opening your deal</h1>
+    <div class="product" id="productLabel">Loading…</div>
+
+    <button class="btn" id="openAppBtn">Open in Amazon App</button>
+    <a class="secondary" id="browserLink" href="#">Continue in browser</a>
+    <div class="autonote">Trying automatically — tap the button above if nothing happens.</div>
+
+    <div class="status" id="status"></div>
+
+    <div class="raw" id="rawLink"></div>
+
+    <div class="disclosure">
+      As an Amazon Associate I earn from qualifying purchases. Price and availability
+      subject to change.
+    </div>
+  </div>
+
+  <div class="howto">
+    <p><b>How to test this safely:</b></p>
+    <p>1. This file is <b>not</b> linked from anywhere on the live site — visiting
+    thefreebieladycanada.com won't show it to anyone, even after it's pushed to GitHub.</p>
+    <p>2. Once you're ready to try it, push just this one file, then open
+    <code>thefreebieladycanada.com/deep-link-test.html?asin=B0012DK48C</code> yourself —
+    first in your phone's normal browser (Safari/Chrome) to confirm the button and the
+    fallback link both work, then from an actual Instagram Story sent to yourself or
+    Close Friends, to see whether it opens the Amazon app from inside Instagram.</p>
+    <p>3. Swap the ASIN in the URL to test different products — the last part of any
+    Amazon product URL, e.g. <code>B004FHO5Y6</code> or <code>B0FV4LNTM1</code>.</p>
+    <p>4. This version tries the Amazon app automatically the moment the page opens,
+    so from a follower's side it can feel like one tap on the Story sticker. Worth
+    knowing honestly: it's still technically two steps (Instagram opens this page
+    first, this page then fires the app) — no link, free or paid, can make
+    Instagram skip its own in-app browser on that first tap. What this changes is
+    only whether the second step needs a visible button tap or happens on its own.</p>
+    <p>5. Worst case if the app-opening part doesn't fire: it lands you on the normal
+    amazon.ca page under a second later, exactly like today's links already do. It
+    can't leave anyone stuck or send them anywhere else.</p>
+    <p>6. Nothing on this page phones home — no analytics, no cookies, no data
+    collected from you or anyone who taps it.</p>
+  </div>
+
+  <script>
+  (function(){
+    var TAG = "thefreebielad-20";
+    var params = new URLSearchParams(window.location.search);
+    var asin = (params.get("asin") || "B0012DK48C").trim();
+    // Only allow a plausible Amazon ASIN shape — 10 alphanumerics — so a stray or
+    // malformed query string can never build a broken/unexpected link.
+    if (!/^[A-Z0-9]{10}$/i.test(asin)) {
+      document.getElementById("productLabel").textContent =
+        "That doesn't look like a valid ASIN — check the link.";
+      document.getElementById("openAppBtn").style.display = "none";
+      document.getElementById("browserLink").style.display = "none";
+      return;
+    }
+
+    var webUrl = "https://www.amazon.ca/dp/" + asin + "?tag=" + TAG;
+    document.getElementById("productLabel").textContent = "Product " + asin;
+    document.getElementById("browserLink").href = webUrl;
+    document.getElementById("rawLink").textContent = webUrl;
+
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+
+    var appUrl = null;
+    if (isIOS) {
+      // Unofficial, reverse-engineered iOS scheme for the Amazon Shopping app —
+      // not documented by Amazon, may stop working without notice.
+      appUrl = "com.amazon.mobile.shopping.web://amazon.ca/dp/" + asin + "/?tag=" + TAG;
+    } else if (isAndroid) {
+      // Standard Android intent: URI targeting the Amazon Shopping app's package,
+      // with the plain https link as its own built-in fallback.
+      appUrl = "intent://www.amazon.ca/dp/" + asin + "/?tag=" + TAG +
+        "#Intent;package=com.amazon.mShop.android.shopping;scheme=https;end";
+    }
+
+    var statusEl = document.getElementById("status");
+    var autoNoteEl = document.querySelector(".autonote");
+    var fallbackTimer = null;
+
+    function goToBrowser(){
+      window.location.href = webUrl;
+    }
+
+    function clearFallback(){
+      if (fallbackTimer) {
+        clearTimeout(fallbackTimer);
+        fallbackTimer = null;               // <- the missing line: without this,
+      }                                      //    one cleared timer permanently
+    }                                        //    blocked every attempt after it.
+
+    function attemptOpen(isAuto){
+      if (!appUrl) {
+        statusEl.textContent = "No app scheme for this device — opening in browser.";
+        goToBrowser();
+        return;
+      }
+      clearFallback();     // cancel any earlier pending attempt, then start clean
+      statusEl.textContent = "Trying the Amazon app…";
+      // If the app actually opens, this tab backgrounds and the fallback below
+      // never fires. If nothing happens (app not installed, or this particular
+      // browser/webview blocks a scheme it didn't originate from a tap on),
+      // we drop straight into the same working amazon.ca link every current
+      // Story link already uses — so failure here is invisible to a follower.
+      window.location.href = appUrl;
+      fallbackTimer = setTimeout(function(){
+        fallbackTimer = null;
+        statusEl.textContent = "Amazon app didn't open — continuing in browser.";
+        goToBrowser();
+      }, isAuto ? 900 : 1200);
+    }
+
+    document.getElementById("openAppBtn").addEventListener("click", function(e){
+      e.preventDefault();
+      attemptOpen(false);      // always live — never gated by whatever the auto-try did
+    });
+
+    document.addEventListener("visibilitychange", function(){
+      if (document.hidden) clearFallback();
+    });
+
+    // If Instagram's webview restores this exact page from its own cache when
+    // you navigate back to it (rather than loading it fresh), re-run cleanly
+    // instead of reusing whatever state the first visit ended in.
+    window.addEventListener("pageshow", function(e){
+      if (e.persisted) {
+        clearFallback();
+        statusEl.textContent = "";
+        if (appUrl) attemptOpen(true);
+      }
+    });
+
+    // Try once automatically, the instant the page is ready — this is the same
+    // "load, then immediately fire the app scheme" trick paid deep-link tools
+    // use so a visitor only has to tap once (the Story sticker itself), instead
+    // of landing here and then tapping a second button. It is genuinely a
+    // second, automatic step though, not a true single hop — Instagram always
+    // opens its own in-app browser first no matter whose link is behind the
+    // sticker, and no tool, paid or free, can skip that. Some Instagram webview
+    // versions block a scheme that wasn't triggered by a real tap, in which
+    // case this quietly does nothing and the button (or the browser fallback
+    // link) still works normally.
+    if (appUrl) {
+      setTimeout(function(){ attemptOpen(true); }, 150);
+    } else if (autoNoteEl) {
+      autoNoteEl.style.display = "none";
+    }
+  })();
+  </script>
+
+</body>
+</html>
