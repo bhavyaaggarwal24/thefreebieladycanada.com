@@ -141,20 +141,25 @@
     var statusEl = document.getElementById("status");
     var autoNoteEl = document.querySelector(".autonote");
     var fallbackTimer = null;
-    var alreadyTried = false;
 
     function goToBrowser(){
       window.location.href = webUrl;
     }
 
+    function clearFallback(){
+      if (fallbackTimer) {
+        clearTimeout(fallbackTimer);
+        fallbackTimer = null;               // <- the missing line: without this,
+      }                                      //    one cleared timer permanently
+    }                                        //    blocked every attempt after it.
+
     function attemptOpen(isAuto){
-      if (fallbackTimer) return;           // one attempt in flight at a time
-      alreadyTried = true;
       if (!appUrl) {
         statusEl.textContent = "No app scheme for this device — opening in browser.";
         goToBrowser();
         return;
       }
+      clearFallback();     // cancel any earlier pending attempt, then start clean
       statusEl.textContent = "Trying the Amazon app…";
       // If the app actually opens, this tab backgrounds and the fallback below
       // never fires. If nothing happens (app not installed, or this particular
@@ -163,6 +168,7 @@
       // Story link already uses — so failure here is invisible to a follower.
       window.location.href = appUrl;
       fallbackTimer = setTimeout(function(){
+        fallbackTimer = null;
         statusEl.textContent = "Amazon app didn't open — continuing in browser.";
         goToBrowser();
       }, isAuto ? 900 : 1200);
@@ -170,12 +176,21 @@
 
     document.getElementById("openAppBtn").addEventListener("click", function(e){
       e.preventDefault();
-      attemptOpen(false);
+      attemptOpen(false);      // always live — never gated by whatever the auto-try did
     });
 
     document.addEventListener("visibilitychange", function(){
-      if (document.hidden && fallbackTimer) {
-        clearTimeout(fallbackTimer);
+      if (document.hidden) clearFallback();
+    });
+
+    // If Instagram's webview restores this exact page from its own cache when
+    // you navigate back to it (rather than loading it fresh), re-run cleanly
+    // instead of reusing whatever state the first visit ended in.
+    window.addEventListener("pageshow", function(e){
+      if (e.persisted) {
+        clearFallback();
+        statusEl.textContent = "";
+        if (appUrl) attemptOpen(true);
       }
     });
 
