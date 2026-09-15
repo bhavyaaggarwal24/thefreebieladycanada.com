@@ -44,12 +44,12 @@
 
   <div class="card">
     <div class="handle">@thefreebieladycanada</div>
-    <h1>Opening your deal</h1>
-    <div class="product" id="productLabel">Just a second…</div>
+    <h1>Your deal is ready</h1>
+    <div class="product" id="productLabel">Tap below to open it on Amazon.ca.</div>
 
     <button class="btn" id="openAppBtn">Open in Amazon App</button>
     <a class="secondary" id="browserLink" href="#">Continue in browser</a>
-    <div class="autonote">Trying automatically — tap the button above if nothing happens.</div>
+    <div class="autonote">Opens the Amazon app if you have it — otherwise the usual amazon.ca page.</div>
 
     <div class="status" id="status"></div>
 
@@ -75,7 +75,6 @@
     }
 
     var webUrl = "https://www.amazon.ca/dp/" + asin + "?tag=" + TAG;
-    document.getElementById("productLabel").textContent = "Taking you to Amazon.ca";
     document.getElementById("browserLink").href = webUrl;
 
     var ua = navigator.userAgent || "";
@@ -96,7 +95,6 @@
     }
 
     var statusEl = document.getElementById("status");
-    var autoNoteEl = document.querySelector(".autonote");
     var fallbackTimer = null;
 
     function goToBrowser(){
@@ -110,28 +108,35 @@
       }
     }
 
-    function attemptOpen(isAuto){
+    // IMPORTANT — Amazon Associates compliance (Commission Income Statement §2(e)
+    // and Participation Requirements §6(v)): a purchase is disqualified, and this
+    // page counts as a prohibited "Redirecting Link", if it sends someone toward
+    // Amazon without requiring a click or other affirmative action HERE FIRST.
+    // So there is no automatic redirect anywhere on this page — attemptOpen()
+    // only ever runs from a real tap on one of the two buttons below. Do not
+    // add a setTimeout/auto-fire back in; that would reintroduce the exact
+    // "Redirecting Link" problem this page was rewritten to avoid.
+    function attemptOpen(){
       if (!appUrl) {
         goToBrowser();
         return;
       }
-      clearFallback();     // cancel any earlier pending attempt, then start clean
+      clearFallback();
       statusEl.textContent = "Trying the Amazon app…";
       // If the app actually opens, this tab backgrounds and the fallback below
       // never fires. If nothing happens (app not installed, or this particular
-      // browser/webview blocks a scheme it didn't originate from a tap on), we
-      // drop straight into the normal working amazon.ca link — so failure here
-      // is invisible to whoever tapped it.
+      // browser/webview blocks the scheme), we drop straight into the normal
+      // working amazon.ca link — so failure here is invisible to whoever tapped.
       window.location.href = appUrl;
       fallbackTimer = setTimeout(function(){
         fallbackTimer = null;
         goToBrowser();
-      }, isAuto ? 900 : 1200);
+      }, 1200);
     }
 
     document.getElementById("openAppBtn").addEventListener("click", function(e){
       e.preventDefault();
-      attemptOpen(false);      // always live — never gated by whatever the auto-try did
+      attemptOpen();
     });
 
     document.addEventListener("visibilitychange", function(){
@@ -139,28 +144,14 @@
     });
 
     // If the browser restores this exact page from its own cache on a back
-    // navigation, re-run cleanly instead of reusing whatever state the first
-    // visit ended in.
+    // navigation, just reset the visible state — never auto-fire attemptOpen()
+    // here, for the same compliance reason as above. The visitor taps again.
     window.addEventListener("pageshow", function(e){
       if (e.persisted) {
         clearFallback();
         statusEl.textContent = "";
-        if (appUrl) attemptOpen(true);
       }
     });
-
-    // Try once automatically, the instant the page is ready, so a visitor often
-    // only has to tap once (the Story sticker itself). This is genuinely a
-    // second, automatic step though — every platform opens its own in-app
-    // browser first no matter whose link is behind the sticker, and this can't
-    // skip that. Some webviews block a scheme that wasn't triggered by a real
-    // tap, in which case this quietly does nothing and the button above (or
-    // "Continue in browser") still works normally.
-    if (appUrl) {
-      setTimeout(function(){ attemptOpen(true); }, 150);
-    } else if (autoNoteEl) {
-      autoNoteEl.style.display = "none";
-    }
   })();
   </script>
 
