@@ -187,6 +187,17 @@ footer{
 }
 footer b{color:var(--ink); font-weight:600}
 @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+/* Wider screens: perks sit beside the deal list instead of stacked above it.
+   Mobile (the majority of traffic, arriving from Story/bio taps) is untouched
+   below this breakpoint -- everything above stays a single centred column. */
+@media (min-width:860px){
+  .wrap{max-width:1040px}
+  .layout{display:grid; grid-template-columns:300px 1fr; gap:28px; align-items:start}
+  .sidebar{position:sticky; top:22px}
+  .jump{display:none}
+  .daygroup ul{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+}
 </style>
 </head>
 <body>
@@ -197,15 +208,17 @@ footer b{color:var(--ink); font-weight:600}
     <div class="rule"></div>
     <p class="sub">Hand-picked price drops on Amazon.ca — from
       <b>@thefreebieladycanada</b>.</p>
-    <p class="meta">127 deals &middot; checked 23 September, 6:05 PM ET</p>
+    <p class="meta">127 deals &middot; checked 23 September, 8:34 PM ET</p>
   </header>
 
   <p class="upfront"><b>Affiliate links</b> — every link on this page, including the perks below, is an Amazon affiliate link.</p>
 
-  <section class="perks">
-    <h2>Free trials &amp; perks worth a look</h2>
-    <p class="perks-sub">A few Amazon extras — separate from the deals below, no purchase needed to join.</p>
-    <div class="perk-grid">
+  <div class="layout">
+    <aside class="sidebar">
+      <section class="perks">
+        <h2>Free trials &amp; perks worth a look</h2>
+        <p class="perks-sub">A few Amazon extras — separate from the deals below, no purchase needed to join.</p>
+        <div class="perk-grid">
       <a class="perk" href="https://www.amazon.ca/amazonprime?tag=thefreebielad-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">📦</span>
         <span class="ptxt">
@@ -259,18 +272,20 @@ footer b{color:var(--ink); font-weight:600}
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
-    </div>
-    <a class="jump" href="#deals">See today's 127 deals &darr;</a>
-  </section>
+        </div>
+        <a class="jump" href="#deals">See today's 127 deals &darr;</a>
+      </section>
+    </aside>
 
-  <div class="searchwrap">
-    <input type="search" id="dealSearch" class="searchbox" autocomplete="off"
-           placeholder="Search past &amp; present deals&hellip;" aria-label="Search deals">
-    <div id="searchResults" class="searchresults" hidden></div>
-  </div>
+    <div class="main">
+      <div class="searchwrap">
+        <input type="search" id="dealSearch" class="searchbox" autocomplete="off"
+               placeholder="Search past &amp; present deals&hellip;" aria-label="Search deals">
+        <div id="searchResults" class="searchresults" hidden></div>
+      </div>
 
-  <h2 class="deals-head" id="deals">Today's deals</h2>
-  <div class="daylist">
+      <h2 class="deals-head" id="deals">Today's deals</h2>
+      <div class="daylist">
 
     <details class="daygroup" open>
       <summary class="daysum">
@@ -2510,11 +2525,13 @@ footer b{color:var(--ink); font-weight:600}
     </li>
       </ul>
     </details>
-  </div>
+      </div>
 
-  <p class="note">Amazon prices move fast — sometimes within the hour. Always check the
-    price on the Amazon page before you buy; the figures here are what they were when
-    this list was built.</p>
+      <p class="note">Amazon prices move fast — sometimes within the hour. Always check the
+        price on the Amazon page before you buy; the figures here are what they were when
+        this list was built.</p>
+    </div>
+  </div>
 
   <section class="about">
     <h2>About this page</h2>
