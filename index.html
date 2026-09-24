@@ -61,6 +61,12 @@ h1 em{
 .meta{margin:14px 0 0; font-size:12px; color:var(--muted)}
 .rule{height:5px; border-radius:999px; background:var(--grad); margin:18px 0 0; max-width:120px}
 
+.igpromo{
+  margin:14px 0 0; padding:13px 15px; border-radius:13px; background:var(--sunken);
+  border:1px dashed var(--line-2); font-size:13px; line-height:1.55; color:var(--ink);
+}
+.igpromo b{color:var(--g1); font-weight:700}
+
 .upfront{
   margin:22px 0 0; padding:13px 15px; border-radius:13px; background:var(--card);
   border:1px solid var(--line); font-size:13px; line-height:1.55; color:var(--ink);
@@ -90,6 +96,24 @@ h1 em{
   background:var(--grad); color:var(--ink); text-decoration:none; font-weight:700;
   font-size:13.5px; padding:11px 16px; border-radius:999px; text-align:center;
 }
+
+.emailcap{margin:14px 0 0; padding:16px 15px; border-radius:15px; background:var(--card);
+  border:1px solid var(--line)}
+.emailcap h2{font-size:15px; font-weight:700; margin:0; letter-spacing:-.01em}
+.emailcap-sub{margin:4px 0 0; font-size:12px; color:var(--muted)}
+.emailform{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0}
+.emailform input{
+  flex:1 1 140px; min-width:0; padding:10px 12px; border-radius:10px;
+  border:1px solid var(--line); background:var(--sunken); font-family:var(--face);
+  font-size:13px; color:var(--ink);
+}
+.emailform input::placeholder{color:var(--muted)}
+.emailform button{
+  flex:none; border:0; border-radius:10px; padding:10px 16px; background:var(--grad);
+  color:var(--ink); font-family:var(--face); font-weight:700; font-size:13px; cursor:pointer;
+}
+.emailform button:disabled{opacity:.5; cursor:not-allowed}
+.emailnote{margin:10px 0 0; font-size:11.5px; line-height:1.5; color:var(--muted)}
 
 .searchwrap{margin:22px 0 0; position:relative}
 .searchbox{
@@ -208,7 +232,9 @@ footer b{color:var(--ink); font-weight:600}
     <div class="rule"></div>
     <p class="sub">Hand-picked price drops on Amazon.ca — from
       <b>@thefreebieladycanada</b>.</p>
-    <p class="meta">127 deals &middot; checked 23 September, 8:34 PM ET</p>
+    <p class="meta">127 deals &middot; checked 23 September, 9:11 PM ET</p>
+    <p class="igpromo">📸 <b>Comment DEAL</b> on any Instagram post and I'll DM you the
+      link — or <b>follow @thefreebieladycanada</b> so today's drops hit your feed first.</p>
   </header>
 
   <p class="upfront"><b>Affiliate links</b> — every link on this page, including the perks below, is an Amazon affiliate link.</p>
@@ -274,6 +300,16 @@ footer b{color:var(--ink); font-weight:600}
       </a>
         </div>
         <a class="jump" href="#deals">See today's 127 deals &darr;</a>
+      </section>
+
+      <section class="emailcap">
+        <h2>Get today's deals by email</h2>
+        <p class="emailcap-sub">No spam, just the daily list — drop your email and I'll add you.</p>
+        <form class="emailform" id="emailCapForm" data-contact="thefreebieladycanada@gmail.com">
+          <input type="email" id="emailCapInput" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Notify me</button>
+        </form>
+        <p class="emailnote" id="emailCapNote">Opens your email app so I can add you personally — a proper mailing list is coming.</p>
       </section>
     </aside>
 
@@ -2607,6 +2643,37 @@ footer b{color:var(--ink); font-weight:600}
     var q = norm(input.value.trim());
     filterOnPage(q);
     renderArchiveMatches(q);
+  });
+})();
+
+(function(){
+  // Email capture -- no mailing-list service is wired up yet (see the
+  // module docstring's "INSTAGRAM CALLOUT + EMAIL CAPTURE" note). Until
+  // there is one, this just opens a pre-filled mailto: to Akshra's own
+  // contact address so a real person gets the signup, same mechanism the
+  // "flag as expired" link already uses.
+  var form = document.getElementById('emailCapForm');
+  if (!form) return;
+  var input = document.getElementById('emailCapInput');
+  var note = document.getElementById('emailCapNote');
+  var contact = (form.getAttribute('data-contact') || '').trim();
+  if (!contact) {
+    input.disabled = true;
+    form.querySelector('button').disabled = true;
+    if (note) note.textContent = "Email signups aren't set up yet -- follow @thefreebieladycanada on Instagram for now.";
+    return;
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = (input.value || '').trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (note) note.textContent = 'That email doesn’t look quite right -- double check it?';
+      return;
+    }
+    var subject = encodeURIComponent('Add me to the daily deals list');
+    var body = encodeURIComponent('Please add this address to your daily deals list: ' + email);
+    window.location.href = 'mailto:' + contact + '?subject=' + subject + '&body=' + body;
+    if (note) note.textContent = "Opening your email app — just hit send and I'll add you.";
   });
 })();
 </script>
