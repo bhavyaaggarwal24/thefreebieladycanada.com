@@ -304,12 +304,14 @@ footer b{color:var(--ink); font-weight:600}
 
       <section class="emailcap">
         <h2>Get today's deals by email</h2>
-        <p class="emailcap-sub">No spam, just the daily list — drop your email and I'll add you.</p>
-        <form class="emailform" id="emailCapForm" data-contact="thefreebieladycanada@gmail.com">
-          <input type="email" id="emailCapInput" placeholder="you@email.com" required aria-label="Email address">
+        <p class="emailcap-sub">No spam, just the daily list of Canadian Amazon deals.</p>
+        <form class="emailform" action="https://app.kit.com/forms/9993319/subscriptions" method="post">
+          <input type="email" name="email_address" placeholder="you@email.com" required
+                 autocomplete="email" aria-label="Email address">
           <button type="submit">Notify me</button>
         </form>
-        <p class="emailnote" id="emailCapNote">Opens your email app so I can add you personally — a proper mailing list is coming.</p>
+        <p class="emailnote">You'll get one email to confirm first. Every email has a one-click
+          unsubscribe, and your address is never shared or sold.</p>
       </section>
 
     </aside>
