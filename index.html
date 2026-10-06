@@ -114,6 +114,9 @@ h1 em{font-style:normal; display:inline-block; background:var(--sun); padding:0 
 .srrow:hover,.srrow:active{background:var(--sunken)}
 .srrow b{color:var(--teal-d); font-weight:800; flex:none}
 .no-results{padding:10px; font-size:12.5px; color:var(--muted)}
+.srsum{margin:0; padding:10px 12px; font-size:14px; line-height:1.5}
+.srsum.ok b{color:var(--teal-d)}
+.srsum a{color:var(--teal-d); font-weight:700}
 
 .shelf{margin-top:26px; scroll-margin-top:110px}
 .shead{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:26px 0 16px; scroll-margin-top:110px}
@@ -230,7 +233,7 @@ footer b{color:var(--ink); font-weight:700}
     <span class="handle">@thefreebieladycanada</span>
     <h1>Hand-picked <em>Amazon.ca</em> deals, checked every day</h1>
     <p class="sub">Price drops, coupons &amp; freebies for Canada, in one place.</p>
-    <p class="meta"><span class="live"><i></i>Live</span>192 deals &middot; checked 6 October, 3:05 PM ET</p>
+    <p class="meta"><span class="live"><i></i>Live</span>192 deals &middot; checked 6 October, 3:44 PM ET</p>
       <section class="emailcap">
         <h2>Get today's deals by email</h2>
         <p class="emailcap-sub">No spam, just the daily list of Canadian Amazon deals.</p>
@@ -4128,6 +4131,7 @@ footer b{color:var(--ink); font-weight:700}
   function norm(s){ return (s || '').toLowerCase(); }
 
   function filterOnPage(q){
+    var count = 0;
     groups.forEach(function(g){
       if (!q) { g.hidden = false; g.open = false; return; }
       var any = false;
@@ -4135,15 +4139,21 @@ footer b{color:var(--ink); font-weight:700}
         var nameEl = li.querySelector('.name');
         var hit = norm(nameEl ? nameEl.textContent : '').indexOf(q) !== -1;
         li.hidden = !hit;
-        if (hit) any = true;
+        if (hit) { any = true; count++; }
       });
       g.hidden = !any;
       g.open = any;
     });
     if (!q && groups[0]) groups[0].open = true;
+    return count;
   }
 
-  function renderArchiveMatches(q){
+  // Search summary (7 Oct 2026): always say first how many deals ON THIS PAGE
+  // match, then list older deals that have rolled off the page (if any). The
+  // old box only talked about past deals, so "No past deals match" showed even
+  // when today's list had matches right below it -- confusing.
+  function esc(s){ return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function renderArchiveMatches(q, n){
     if (!q) { results.hidden = true; results.innerHTML = ''; return; }
     var onPage = {};
     Array.prototype.forEach.call(document.querySelectorAll('li[data-slug]'), function(li){
@@ -4152,25 +4162,33 @@ footer b{color:var(--ink); font-weight:700}
     var matches = idx.filter(function(it){
       return it.s && !onPage[it.s] && norm(it.t).indexOf(q) !== -1;
     }).slice(0, 8);
-    results.hidden = false;
-    if (!matches.length) {
-      results.innerHTML = '<p class="no-results">No past deals match &ldquo;' +
-        q.replace(/</g, '&lt;') + '&rdquo;.</p>';
-      return;
+    var word = '&ldquo;' + esc(q) + '&rdquo;';
+    var html;
+    if (n > 0) {
+      html = '<p class="srsum ok"><b>' + n + (n === 1 ? ' deal' : ' deals') + '</b> on this page match ' +
+        word + ' &mdash; <a href="#deals">see ' + (n === 1 ? 'it' : 'them') + ' below &darr;</a></p>';
+    } else if (matches.length) {
+      html = '<p class="srsum">Nothing on the current list matches ' + word +
+        ', but these older deals do (prices may have changed):</p>';
+    } else {
+      html = '<p class="srsum">No deals match ' + word + ' right now. Try a shorter word or just the brand name.</p>';
     }
-    results.innerHTML = '<p class="srh">From past deals</p>' + matches.map(function(m){
-      var pct = m.p ? '<b>&minus;' + m.p + '%</b>' : '';
-      return '<a class="srrow" href="/deals/' + encodeURIComponent(m.s) + '/">' +
-        '<span>' + String(m.t || '').replace(/</g, '&lt;') + '</span>' + pct + '</a>';
-    }).join('');
+    if (matches.length) {
+      html += '<p class="srh">Older deals (no longer on this page)</p>' + matches.map(function(m){
+        var pct = m.p ? '<b>&minus;' + m.p + '%</b>' : '';
+        return '<a class="srrow" href="/deals/' + encodeURIComponent(m.s) + '/">' +
+          '<span>' + esc(m.t) + '</span>' + pct + '</a>';
+      }).join('');
+    }
+    results.hidden = false;
+    results.innerHTML = html;
   }
 
   var featured = document.getElementById('featured');
   input.addEventListener('input', function(){
     var q = norm(input.value.trim());
     if (featured) featured.hidden = !!q;
-    filterOnPage(q);
-    renderArchiveMatches(q);
+    renderArchiveMatches(q, filterOnPage(q));
   });
 })();
 
