@@ -819,12 +819,12 @@
     "asin": "B0DPLDTWW5",
     "title_short": "Exploding Kittens: Survivor",
     "was": 24.34,
-    "now": 15,
+    "now": 15.0,
     "pct": 38,
     "link": "https://www.amazon.ca/dp/B0DPLDTWW5?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-27",
+    "last_seen": "2026-10-05",
     "slug": "b0dpldtww5-exploding-kittens-survivor"
   },
   "B0CJBQBB7F": {
@@ -1669,14 +1669,14 @@
   },
   "B0CGYN1GJ5": {
     "asin": "B0CGYN1GJ5",
-    "title_short": "LEGO City Blue Monster Truck",
+    "title_short": "LEGO City Monster Truck",
     "was": 19.99,
     "now": 14.66,
     "pct": 27,
     "link": "https://www.amazon.ca/dp/B0CGYN1GJ5?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-24",
+    "last_seen": "2026-10-05",
     "slug": "b0cgyn1gj5-lego-city-blue-monster-truck"
   },
   "B0BFVDFGQM": {
@@ -1837,14 +1837,14 @@
   },
   "B0F3BJMLKJ": {
     "asin": "B0F3BJMLKJ",
-    "title_short": "Blink Mini 2K+ Indoor Cam",
+    "title_short": "Blink Mini 2K+ Indoor Camera",
     "was": 59.99,
     "now": 23.99,
     "pct": 60,
     "link": "https://www.amazon.ca/dp/B0F3BJMLKJ?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-23",
-    "last_seen": "2026-10-02",
+    "last_seen": "2026-10-05",
     "slug": "b0f3bjmlkj-blink-mini-2k-camera"
   },
   "B0GS6STVCN": {
@@ -3392,7 +3392,7 @@
     "link": "https://www.amazon.ca/dp/B098RH3LTB?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-04",
-    "last_seen": "2026-10-04",
+    "last_seen": "2026-10-05",
     "slug": "b098rh3ltb-shark-vertex-pro-cordless-vac"
   },
   "B097GLJ758": {
@@ -3694,5 +3694,185 @@
     "first_seen": "2026-10-05",
     "last_seen": "2026-10-05",
     "slug": "b09c6ptsf7-clorox-on-the-go-wipes-12-pack"
+  },
+  "B09RTLFV3F": {
+    "asin": "B09RTLFV3F",
+    "title_short": "Remington Shine Therapy 2\" Flat Iron",
+    "was": 53.99,
+    "now": 30.0,
+    "pct": 44,
+    "link": "https://www.amazon.ca/dp/B09RTLFV3F?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b09rtlfv3f-remington-shine-therapy-2-flat-iron"
+  },
+  "B0DSCL9N58": {
+    "asin": "B0DSCL9N58",
+    "title_short": "Ms. Rachel Learning Phone",
+    "was": 20.66,
+    "now": 15.66,
+    "pct": 24,
+    "link": "https://www.amazon.ca/dp/B0DSCL9N58?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0dscl9n58-ms-rachel-learning-phone"
+  },
+  "B0FC1K5QZ9": {
+    "asin": "B0FC1K5QZ9",
+    "title_short": "Kindle Scribe Colorsoft",
+    "was": 899.99,
+    "now": 649.99,
+    "pct": 28,
+    "link": "https://www.amazon.ca/dp/B0FC1K5QZ9?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0fc1k5qz9-kindle-scribe-colorsoft"
+  },
+  "B0FKB5D9RF": {
+    "asin": "B0FKB5D9RF",
+    "title_short": "Anker SOLIX C1000 Gen 2",
+    "was": 1299.0,
+    "now": 649.0,
+    "pct": 50,
+    "link": "https://www.amazon.ca/dp/B0FKB5D9RF?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0fkb5d9rf-anker-solix-c1000-gen-2"
+  },
+  "B0D2JB6Q3X": {
+    "asin": "B0D2JB6Q3X",
+    "title_short": "Scramboozle Puzzle Ball",
+    "was": 15.21,
+    "now": 8.97,
+    "pct": 41,
+    "link": "https://www.amazon.ca/dp/B0D2JB6Q3X?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Prime member price \u2014 sign in with Prime to see it",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0d2jb6q3x-scramboozle-puzzle-ball"
+  },
+  "B0DQFF7FBS": {
+    "asin": "B0DQFF7FBS",
+    "title_short": "LG UltraFine 27\" 4K Monitor",
+    "was": 499.99,
+    "now": 356.24,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B0DQFF7FBS?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0dqff7fbs-lg-ultrafine-27-4k-monitor"
+  },
+  "B072PZKLX9": {
+    "asin": "B072PZKLX9",
+    "title_short": "Melissa & Doug Fresh Mart Set",
+    "was": 50.99,
+    "now": 26.87,
+    "pct": 47,
+    "link": "https://www.amazon.ca/dp/B072PZKLX9?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b072pzklx9-melissa-doug-fresh-mart-set"
+  },
+  "B0BDSLFXQ1": {
+    "asin": "B0BDSLFXQ1",
+    "title_short": "Ninja PossibleCooker PRO",
+    "was": 199.99,
+    "now": 139.99,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B0BDSLFXQ1?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0bdslfxq1-ninja-possiblecooker-pro"
+  },
+  "B0741VXTPW": {
+    "asin": "B0741VXTPW",
+    "title_short": "Ninja BL660C Pro Blender",
+    "was": 179.99,
+    "now": 99.99,
+    "pct": 44,
+    "link": "https://www.amazon.ca/dp/B0741VXTPW?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0741vxtpw-ninja-bl660c-pro-blender"
+  },
+  "B0C7XDKZPD": {
+    "asin": "B0C7XDKZPD",
+    "title_short": "Echo Show 15",
+    "was": 499.99,
+    "now": 289.99,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B0C7XDKZPD?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0c7xdkzpd-echo-show-15"
+  },
+  "B0DRW76BWF": {
+    "asin": "B0DRW76BWF",
+    "title_short": "LEGO Friends Cat Birthday Party",
+    "was": 39.99,
+    "now": 28.48,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B0DRW76BWF?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0drw76bwf-lego-friends-cat-birthday-party"
+  },
+  "B0FRM1VHXH": {
+    "asin": "B0FRM1VHXH",
+    "title_short": "Philips 4400 Espresso Machine",
+    "was": 1199.99,
+    "now": 799.99,
+    "pct": 33,
+    "link": "https://www.amazon.ca/dp/B0FRM1VHXH?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0frm1vhxh-philips-4400-espresso-machine"
+  },
+  "B09P9V1N7S": {
+    "asin": "B09P9V1N7S",
+    "title_short": "Hoover CleanSlate Spot Cleaner",
+    "was": 169.99,
+    "now": 98.99,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B09P9V1N7S?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b09p9v1n7s-hoover-cleanslate-spot-cleaner"
+  },
+  "B0BZT443MB": {
+    "asin": "B0BZT443MB",
+    "title_short": "STEM Pixel Art Challenge",
+    "was": 28.49,
+    "now": 19.46,
+    "pct": 32,
+    "link": "https://www.amazon.ca/dp/B0BZT443MB?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Prime member price \u2014 sign in with Prime to see it",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0bzt443mb-stem-pixel-art-challenge"
+  },
+  "B0CGFF2G5V": {
+    "asin": "B0CGFF2G5V",
+    "title_short": "Melissa & Doug Sticker WOW!",
+    "was": 16.99,
+    "now": 10.73,
+    "pct": 37,
+    "link": "https://www.amazon.ca/dp/B0CGFF2G5V?tag=thefreebielad-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "slug": "b0cgff2g5v-melissa-doug-sticker-wow"
   }
 }
