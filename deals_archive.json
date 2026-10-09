@@ -553,14 +553,14 @@
   },
   "B07V37GVY9": {
     "asin": "B07V37GVY9",
-    "title_short": "AstroAI 27\" Snow Brush",
+    "title_short": "AstroAI Snow Brush & Scraper",
     "was": 28.99,
-    "now": 19.99,
-    "pct": 31,
+    "now": 16.99,
+    "pct": 41,
     "link": "https://www.amazon.ca/dp/B07V37GVY9?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-15",
-    "last_seen": "2026-09-25",
+    "last_seen": "2026-10-09",
     "slug": "b07v37gvy9-astroai-27-snow-brush"
   },
   "B079P99STM": {
@@ -1549,14 +1549,14 @@
   },
   "B0BFP4VZCP": {
     "asin": "B0BFP4VZCP",
-    "title_short": "The Uzzle 3.0 Game",
+    "title_short": "The Uzzle 3.0 Board Game",
     "was": 98,
     "now": 67.25,
     "pct": 31,
     "link": "https://www.amazon.ca/dp/B0BFP4VZCP?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-25",
+    "last_seen": "2026-10-09",
     "slug": "b0bfp4vzcp-the-uzzle-3-0-game"
   },
   "B08HDHNC7Q": {
@@ -2245,14 +2245,14 @@
   },
   "B01D4UB3XU": {
     "asin": "B01D4UB3XU",
-    "title_short": "Turtle Wax Zip Wax, 2.5L",
-    "was": 48.98,
-    "now": 33.89,
-    "pct": 31,
+    "title_short": "Turtle Wax Zip Wax Shampoo 2.5L",
+    "was": 47.88,
+    "now": 31.89,
+    "pct": 33,
     "link": "https://www.amazon.ca/dp/B01D4UB3XU?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-25",
+    "last_seen": "2026-10-09",
     "slug": "b01d4ub3xu-turtle-wax-zip-wax-2-5l"
   },
   "B074L8RV1F": {
@@ -5302,5 +5302,77 @@
     "first_seen": "2026-10-08",
     "last_seen": "2026-10-08",
     "slug": "b00i8obaou-expo-ultra-fine-markers-8pk"
+  },
+  "B000B3AR04": {
+    "asin": "B000B3AR04",
+    "title_short": "Irwin ProTouch Coping Saw",
+    "was": 17.99,
+    "now": 10,
+    "pct": 44,
+    "link": "https://www.amazon.ca/dp/B000B3AR04?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b000b3ar04-irwin-protouch-coping-saw"
+  },
+  "B0F3QCWLLG": {
+    "asin": "B0F3QCWLLG",
+    "title_short": "Shark Cyclone PET Handheld Vac",
+    "was": 109.99,
+    "now": 69.99,
+    "pct": 36,
+    "link": "https://www.amazon.ca/dp/B0F3QCWLLG?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b0f3qcwllg-shark-cyclone-pet-handheld-vac"
+  },
+  "B01LZ52ISO": {
+    "asin": "B01LZ52ISO",
+    "title_short": "EPAuto Cabin Air Filter, 2pk",
+    "was": 34.99,
+    "now": 22.87,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B01LZ52ISO?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b01lz52iso-epauto-cabin-air-filter-2pk"
+  },
+  "B01NCX3H1G": {
+    "asin": "B01NCX3H1G",
+    "title_short": "AstroAI Digital Tire Gauge",
+    "was": 34.99,
+    "now": 22.09,
+    "pct": 37,
+    "link": "https://www.amazon.ca/dp/B01NCX3H1G?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b01ncx3h1g-astroai-digital-tire-gauge"
+  },
+  "B0964G1N18": {
+    "asin": "B0964G1N18",
+    "title_short": "Gaiam Core Sliding Discs, 2pk",
+    "was": 24.54,
+    "now": 16.99,
+    "pct": 31,
+    "link": "https://www.amazon.ca/dp/B0964G1N18?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b0964g1n18-gaiam-core-sliding-discs-2pk"
+  },
+  "B09KX9P829": {
+    "asin": "B09KX9P829",
+    "title_short": "Logitech M650 L Wireless Mouse",
+    "was": 59.99,
+    "now": 39.99,
+    "pct": 33,
+    "link": "https://www.amazon.ca/dp/B09KX9P829?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "slug": "b09kx9p829-logitech-m650-l-wireless-mouse"
   }
 }
