@@ -13,5 +13,5 @@ Replace `index.html` and `og.jpg` with the new pair each time. GitHub Pages
 redeploys within about a minute.
 
 ## Affiliate compliance
-Every outbound link carries the Amazon Associates tag `thefreebielad-20` and
+Every outbound link carries the Amazon Associates tag `thefreebiel04-20` and
 `rel="nofollow sponsored"`. The `#ad` disclosure in the footer is required — leave it in place.
