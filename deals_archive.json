@@ -1961,13 +1961,13 @@
   "B0BMGSHQ12": {
     "asin": "B0BMGSHQ12",
     "title_short": "Cards vs Gravity Game",
-    "was": 42.48,
+    "was": 41.73,
     "now": 22.99,
-    "pct": 46,
+    "pct": 45,
     "link": "https://www.amazon.ca/dp/B0BMGSHQ12?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-20",
-    "last_seen": "2026-10-02",
+    "last_seen": "2026-10-12",
     "slug": "b0bmgshq12-cards-vs-gravity-game"
   },
   "B0CP67QWLY": {
@@ -5873,5 +5873,89 @@
     "first_seen": "2026-10-10",
     "last_seen": "2026-10-10",
     "slug": "b000xi6o2w-singing-machine-karaoke-mic"
+  },
+  "B0GQ9YCXC5": {
+    "asin": "B0GQ9YCXC5",
+    "title_short": "Correction Tape 4pk + Refills",
+    "was": 11.99,
+    "now": 7.03,
+    "pct": 41,
+    "link": "https://www.amazon.ca/dp/B0GQ9YCXC5?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0gq9ycxc5-correction-tape-4pk-refills"
+  },
+  "B0FND8J5Q2": {
+    "asin": "B0FND8J5Q2",
+    "title_short": "Cordless Cat Water Fountain",
+    "was": 35.99,
+    "now": 19.99,
+    "pct": 44,
+    "link": "https://www.amazon.ca/dp/B0FND8J5Q2?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0fnd8j5q2-cordless-cat-water-fountain"
+  },
+  "B0FL157HPN": {
+    "asin": "B0FL157HPN",
+    "title_short": "Music Trivia Card Game",
+    "was": 19.99,
+    "now": 13.99,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B0FL157HPN?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0fl157hpn-music-trivia-card-game"
+  },
+  "B0D67TVMS1": {
+    "asin": "B0D67TVMS1",
+    "title_short": "adidas Vibes Chill Zone EDP",
+    "was": 34.99,
+    "now": 14.7,
+    "pct": 58,
+    "link": "https://www.amazon.ca/dp/B0D67TVMS1?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0d67tvms1-adidas-vibes-chill-zone-edp"
+  },
+  "B0D2D15S4X": {
+    "asin": "B0D2D15S4X",
+    "title_short": "Double-Deck Insulated Lunch Box",
+    "was": 52.99,
+    "now": 35.99,
+    "pct": 32,
+    "link": "https://www.amazon.ca/dp/B0D2D15S4X?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0d2d15s4x-double-deck-insulated-lunch-box"
+  },
+  "B0C556G5J2": {
+    "asin": "B0C556G5J2",
+    "title_short": "Auto-Clamp Car Charger Mount",
+    "was": 49.99,
+    "now": 29.99,
+    "pct": 40,
+    "link": "https://www.amazon.ca/dp/B0C556G5J2?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b0c556g5j2-auto-clamp-car-charger-mount"
+  },
+  "B08X9YDV9N": {
+    "asin": "B08X9YDV9N",
+    "title_short": "HOPFROG 200pc Magnetic Blocks",
+    "was": 67.59,
+    "now": 35.99,
+    "pct": 47,
+    "link": "https://www.amazon.ca/dp/B08X9YDV9N?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "slug": "b08x9ydv9n-hopfrog-200pc-magnetic-blocks"
   }
 }
