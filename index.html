@@ -64,6 +64,10 @@ a{color:inherit}
 .sbtn{display:none; margin-left:auto; width:44px; height:44px; border:1px solid var(--line); border-radius:12px;
   background:var(--card); cursor:pointer; align-items:center; justify-content:center}
 .sbtn svg{width:20px; height:20px}
+.lang{display:flex; flex:none; margin-left:8px; border:1px solid var(--line2); border-radius:10px; overflow:hidden}
+.lang button{min-width:44px; height:40px; border:0; background:#fff; font:600 13px var(--face); color:var(--muted); cursor:pointer}
+.lang button + button{border-left:1px solid var(--line2)}
+.lang button[aria-pressed="true"]{background:var(--ink); color:#fff}
 
 /* ---- intro ---- */
 .intro{padding:30px 0 6px; text-align:center}
@@ -194,7 +198,8 @@ footer b{color:var(--ink); font-weight:600}
 
 @media (min-width:760px){ .emailcap{grid-template-columns:1fr 1.1fr} }
 @media (max-width:760px){
-  .nav{display:none} .sbtn{display:inline-flex}
+  .nav{display:none} .sbtn{display:inline-flex; margin-left:8px} .lang{margin-left:auto}
+  .brand{font-size:14.5px}
   .browse{justify-content:flex-start}
   .srow{flex-wrap:wrap} .sort{width:100%} .sort select{flex:1}
 }
@@ -209,26 +214,36 @@ footer b{color:var(--ink); font-weight:600}
   .cmeta{flex-direction:column; align-items:flex-start; gap:4px}
   .offer{padding:8px}
   .codebox{gap:4px}
-  .codebox code{font-size:12px; letter-spacing:.02em; padding:6px 5px}
-  .copy{min-height:36px; padding:0 8px; font-size:12px}
+  .codebox code{font-size:11px; letter-spacing:0; padding:6px 4px; overflow-wrap:normal; white-space:nowrap; overflow:hidden; text-overflow:clip}
+  .copy{min-height:36px; padding:0 7px; font-size:11.5px}
   .olabel .lg{display:none} .olabel .sm{display:inline}
 }
-@media (max-width:340px){ .grid{grid-template-columns:1fr} }
+@media (max-width:430px){
+  .barin{gap:8px}
+  .brand{font-size:13px; gap:7px} .brand img{width:28px; height:28px}
+  .lang button{min-width:38px; height:38px; font-size:12px}
+  .sbtn{width:40px; height:40px; margin-left:6px}
+}
+@media (max-width:340px){ .grid{grid-template-columns:1fr} .brand span.bt{display:none} }
 @media (prefers-reduced-motion:reduce){*{transition:none!important} html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<a class="skip" href="#deals">Skip to deals</a>
+<a class="skip" href="#deals" data-fr="Aller aux aubaines">Skip to deals</a>
 <header class="bar">
   <div class="wrap barin">
     <a class="brand" href="/"><img src="data:image/png;base64,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" alt="">The Freebie Lady Canada</a>
     <nav class="nav" aria-label="Main">
-      <a href="#deals">Today's deals</a>
-      <a href="#coupons" data-go="code">Coupon codes</a>
-      <a href="/birthday/">Freebies</a>
-      <a href="#email">Email list</a>
+      <a href="#deals" data-fr="Aubaines du jour">Today's deals</a>
+      <a href="#coupons" data-go="code" data-fr="Codes promo">Coupon codes</a>
+      <a href="/birthday/" data-fr="Gratuités">Freebies</a>
+      <a href="#email" data-fr="Infolettre">Email list</a>
     </nav>
-    <button class="sbtn" type="button" id="jumpSearch" aria-label="Search deals">
+    <div class="lang" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false" lang="fr" title="Français">FR</button>
+    </div>
+    <button class="sbtn" type="button" id="jumpSearch" aria-label="Search deals" data-fr-aria="Rechercher les aubaines">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     </button>
   </div>
@@ -238,42 +253,42 @@ footer b{color:var(--ink); font-weight:600}
   <section class="intro">
     <!-- Trademark note (9 Oct 2026): never style Amazon/Prime/Kindle names as badges,
      pills, logos or in Amazon colours -- plain text in the surrounding font only. -->
-    <h1>Hand-picked Canadian deals, checked every day</h1>
-    <p class="sub">Price drops and coupon codes on Amazon.ca, plus freebies for Canada, in one place.</p>
-    <p class="meta"><span class="dot" aria-hidden="true"></span><b>126 live deals</b> &middot; last checked 12 October, 2:04 PM ET</p>
-    <p class="disc"><b>Affiliate links:</b> every Amazon link on this page (including the Prime and perks links) is an affiliate link. As an Amazon Associate I earn from qualifying purchases.</p>
+    <h1 data-fr="Des aubaines canadiennes triées sur le volet, vérifiées chaque jour">Hand-picked Canadian deals, checked every day</h1>
+    <p class="sub" data-fr="Baisses de prix et codes promo sur Amazon.ca, plus des gratuités au Canada, au même endroit.">Price drops and coupon codes on Amazon.ca, plus freebies for Canada, in one place.</p>
+    <p class="meta"><span class="dot" aria-hidden="true"></span><span data-fr="&lt;b&gt;126 aubaines en cours&lt;/b&gt; &amp;middot; dernière vérification 12 octobre, 14 h 18 HE"><b>126 live deals</b> &middot; last checked 12 October, 2:18 PM ET</span></p>
+    <p class="disc" data-fr="&lt;b&gt;Liens d’affiliation :&lt;/b&gt; chaque lien Amazon sur cette page (y compris les liens Prime et avantages) est un lien d’affiliation. En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises."><b>Affiliate links:</b> every Amazon link on this page (including the Prime and perks links) is an affiliate link. As an Amazon Associate I earn from qualifying purchases.</p>
   </section>
 
   <nav class="browse" aria-label="More deal pages">
-    <a href="/winter/"><span aria-hidden="true">❄️</span>Winter-ready</a>
-    <a href="/lego/"><span aria-hidden="true">🧱</span>LEGO under $50</a>
-    <a href="/household/"><span aria-hidden="true">🧽</span>Household under $30</a>
-    <a href="/birthday/"><span aria-hidden="true">🎂</span>Birthday freebies</a>
-    <a class="bl noskim noskimlinks" href="https://www.amazon.ca/amazonprime?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener"><span aria-hidden="true">⭐</span>Try Prime free</a>
+    <a href="/winter/"><span aria-hidden="true">❄️</span><span data-fr="Prêt pour l’hiver">Winter-ready</span></a>
+    <a href="/lego/"><span aria-hidden="true">🧱</span><span data-fr="LEGO à moins de 50 $">LEGO under $50</span></a>
+    <a href="/household/"><span aria-hidden="true">🧽</span><span data-fr="Maison à moins de 30 $">Household under $30</span></a>
+    <a href="/birthday/"><span aria-hidden="true">🎂</span><span data-fr="Gratuités d’anniversaire">Birthday freebies</span></a>
+    <a class="bl noskim noskimlinks" href="https://www.amazon.ca/amazonprime?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener"><span aria-hidden="true">⭐</span><span data-fr="Essayez Prime gratuitement">Try Prime free</span></a>
   </nav>
 
   <section class="tools" aria-label="Find a deal">
     <div class="srow">
       <div class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input type="search" id="dealSearch" autocomplete="off" placeholder="Search deals, e.g. boots, LEGO, earbuds" aria-label="Search past and present deals">
+        <input type="search" id="dealSearch" autocomplete="off" placeholder="Search deals, e.g. boots, LEGO, earbuds" aria-label="Search past and present deals" data-fr-ph="Rechercher, p. ex. bottes, LEGO, écouteurs" data-fr-aria="Rechercher les aubaines actuelles et passées">
       </div>
-      <label class="sort">Sort
+      <label class="sort"><span data-fr="Trier">Sort</span>
         <select id="sortBy">
-          <option value="new">Newest first</option>
-          <option value="pct">Biggest discount</option>
-          <option value="low">Lowest price</option>
+          <option value="new" data-fr="Plus récentes">Newest first</option>
+          <option value="pct" data-fr="Plus gros rabais">Biggest discount</option>
+          <option value="low" data-fr="Prix le plus bas">Lowest price</option>
         </select>
       </label>
     </div>
-    <div class="chips" role="group" aria-label="Filter deals">
-      <button class="chip" type="button" data-f="all" aria-pressed="true">All <span class="n">126</span></button>
-      <button class="chip" type="button" data-f="new" aria-pressed="false">New today <span class="n">19</span></button>
-      <button class="chip" type="button" data-f="code" aria-pressed="false">Coupon codes <span class="n">11</span></button>
-      <button class="chip" type="button" data-f="coupon" aria-pressed="false">All coupons <span class="n">25</span></button>
-      <button class="chip" type="button" data-f="u20" aria-pressed="false">Under $20 <span class="n">43</span></button>
-      <button class="chip" type="button" data-f="winter" aria-pressed="false">Winter <span class="n">13</span></button>
-      <button class="chip" type="button" data-f="vac" aria-pressed="false">Vacuums <span class="n">7</span></button>
+    <div class="chips" role="group" aria-label="Filter deals" data-fr-aria="Filtrer les aubaines">
+      <button class="chip" type="button" data-f="all" aria-pressed="true"><span data-fr="Toutes">All</span> <span class="n">126</span></button>
+      <button class="chip" type="button" data-f="new" aria-pressed="false"><span data-fr="Nouveautés du jour">New today</span> <span class="n">19</span></button>
+      <button class="chip" type="button" data-f="code" aria-pressed="false"><span data-fr="Codes promo">Coupon codes</span> <span class="n">11</span></button>
+      <button class="chip" type="button" data-f="coupon" aria-pressed="false"><span data-fr="Tous les coupons">All coupons</span> <span class="n">25</span></button>
+      <button class="chip" type="button" data-f="u20" aria-pressed="false"><span data-fr="Moins de 20 $">Under $20</span> <span class="n">43</span></button>
+      <button class="chip" type="button" data-f="winter" aria-pressed="false"><span data-fr="Hiver">Winter</span> <span class="n">13</span></button>
+      <button class="chip" type="button" data-f="vac" aria-pressed="false"><span data-fr="Aspirateurs">Vacuums</span> <span class="n">7</span></button>
     </div>
     <div id="searchResults" class="searchresults" hidden></div>
   </section>
@@ -1920,36 +1935,36 @@ footer b{color:var(--ink); font-weight:600}
       <p class="cmeta"><span>Added Oct 5</span><span class="clinks"><a href="https://thefreebieladycanada.com/deals/b0d53n7djv-bamboo-toddler-kitchen-tower/">Details</a><a href="mailto:thefreebieladycanada@gmail.com">Report expired</a></span></p>
     </li>
     </ul>
-    <p class="empty" id="empty" hidden>No deals match that right now. Try another filter or a shorter search word.</p>
+    <p class="empty" id="empty" hidden data-fr="Aucune aubaine ne correspond pour l’instant. Essayez un autre filtre ou un mot plus court.">No deals match that right now. Try another filter or a shorter search word.</p>
     <div class="more"><button type="button" id="moreBtn" hidden>Show more deals</button></div>
-    <p class="pnote">Amazon prices move fast, sometimes within the hour. Check the price on Amazon before you buy; the figures here are from when this list was built.</p>
+    <p class="pnote" data-fr="Les prix sur Amazon changent vite, parfois en moins d’une heure. Vérifiez le prix sur Amazon avant d’acheter; les montants affichés datent de la création de cette liste.">Amazon prices move fast, sometimes within the hour. Check the price on Amazon before you buy; the figures here are from when this list was built.</p>
   </section>
 
   <div id="email">
       <section class="emailcap">
-        <div><h2>Get today's deals by email</h2>
-        <p class="emailcap-sub">No spam, just the daily list of Canadian Amazon deals.</p></div>
+        <div><h2 data-fr="Recevez les aubaines du jour par courriel">Get today's deals by email</h2>
+        <p class="emailcap-sub" data-fr="Pas de pourriel, juste la liste quotidienne des aubaines Amazon au Canada.">No spam, just the daily list of Canadian Amazon deals.</p></div>
         <form class="emailform" action="https://app.kit.com/forms/9993319/subscriptions" method="post">
           <input type="email" name="email_address" placeholder="you@email.com" required
-                 autocomplete="email" aria-label="Email address">
-          <button type="submit">Notify me</button>
+                 autocomplete="email" aria-label="Email address" data-fr-ph="vous@courriel.com" data-fr-aria="Adresse courriel">
+          <button type="submit" data-fr="M’inscrire">Notify me</button>
         </form>
-        <p class="emailnote">You'll get one email to confirm first. Every email has a one-click
+        <p class="emailnote" data-fr="Vous recevrez d’abord un courriel de confirmation. Chaque courriel contient un lien de désabonnement en un clic, et votre adresse n’est jamais partagée ni vendue.">You'll get one email to confirm first. Every email has a one-click
           unsubscribe, and your address is never shared or sold.</p>
       </section>
 
   </div>
-  <p class="follow">On Instagram? <b>Comment DEAL</b> on any post and I'll DM you the link, or follow <b>@thefreebieladycanada</b> for new drops.</p>
+  <p class="follow" data-fr="Sur Instagram? &lt;b&gt;Commentez DEAL&lt;/b&gt; sous n’importe quelle publication et je vous enverrai le lien en message privé, ou suivez &lt;b&gt;@thefreebieladycanada&lt;/b&gt; pour les nouveautés.">On Instagram? <b>Comment DEAL</b> on any post and I'll DM you the link, or follow <b>@thefreebieladycanada</b> for new drops.</p>
 
   <section class="perks">
-    <h2>Free trials &amp; perks</h2>
-    <p class="perks-sub">A few Amazon extras, separate from the deals. No purchase needed to join.</p>
+    <h2 data-fr="Essais gratuits et avantages">Free trials &amp; perks</h2>
+    <p class="perks-sub" data-fr="Quelques extras Amazon, distincts des aubaines. Aucun achat requis pour s’inscrire.">A few Amazon extras, separate from the deals. No purchase needed to join.</p>
     <div class="perk-grid">
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/amazonprime?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">📦</span>
         <span class="ptxt">
-          <span class="pname">Prime free trial</span>
-          <span class="pdesc">Fast free shipping, streaming &amp; more</span>
+          <span class="pname" data-fr="Essai gratuit de Prime">Prime free trial</span>
+          <span class="pdesc" data-fr="Livraison rapide gratuite, streaming et plus">Fast free shipping, streaming &amp; more</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -1957,8 +1972,8 @@ footer b{color:var(--ink); font-weight:600}
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/kindleunlimited?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">📚</span>
         <span class="ptxt">
-          <span class="pname">Kindle Unlimited</span>
-          <span class="pdesc">Unlimited reading — try it free</span>
+          <span class="pname" data-fr="Kindle Unlimited">Kindle Unlimited</span>
+          <span class="pdesc" data-fr="Lecture illimitée, essayez-le gratuitement">Unlimited reading — try it free</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -1966,8 +1981,8 @@ footer b{color:var(--ink); font-weight:600}
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/music/unlimited?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">🎵</span>
         <span class="ptxt">
-          <span class="pname">Amazon Music Unlimited</span>
-          <span class="pdesc">Ad-free music — try it free</span>
+          <span class="pname" data-fr="Amazon Music Unlimited">Amazon Music Unlimited</span>
+          <span class="pdesc" data-fr="Musique sans pub, essayez-la gratuitement">Ad-free music — try it free</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -1975,8 +1990,8 @@ footer b{color:var(--ink); font-weight:600}
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/ftu/home?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">🧸</span>
         <span class="ptxt">
-          <span class="pname">Amazon Kids+</span>
-          <span class="pdesc">Kid-safe books, shows &amp; apps</span>
+          <span class="pname" data-fr="Amazon Kids+">Amazon Kids+</span>
+          <span class="pdesc" data-fr="Livres, émissions et applis pour enfants">Kid-safe books, shows &amp; apps</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -1984,8 +1999,8 @@ footer b{color:var(--ink); font-weight:600}
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/baby-reg/homepage?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">🍼</span>
         <span class="ptxt">
-          <span class="pname">Baby Registry</span>
-          <span class="pdesc">Create your free baby registry</span>
+          <span class="pname" data-fr="Liste de naissance">Baby Registry</span>
+          <span class="pdesc" data-fr="Créez votre liste de naissance gratuite">Create your free baby registry</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -1993,8 +2008,8 @@ footer b{color:var(--ink); font-weight:600}
       <a class="perk noskim noskimlinks" href="https://www.amazon.ca/wedding?tag=thefreebiel04-20" target="_blank" rel="nofollow sponsored noopener">
         <span class="pico">💍</span>
         <span class="ptxt">
-          <span class="pname">Wedding Registry</span>
-          <span class="pdesc">Create your free wedding registry</span>
+          <span class="pname" data-fr="Liste de mariage">Wedding Registry</span>
+          <span class="pdesc" data-fr="Créez votre liste de mariage gratuite">Create your free wedding registry</span>
         </span>
         <span class="go" aria-hidden="true">&rarr;</span>
       </a>
@@ -2002,26 +2017,26 @@ footer b{color:var(--ink); font-weight:600}
   </section>
 
   <section class="about">
-    <h2>About this page</h2>
-    <p>The Freebie Lady Canada is a one-person deal page run from Ontario. I watch
+    <h2 data-fr="À propos de cette page">About this page</h2>
+    <p data-fr="The Freebie Lady Canada est une page d’aubaines tenue par une seule personne en Ontario. Je surveille les baisses de prix sur Amazon.ca et je publie celles qui valent vraiment la peine, surtout pour la maison, la beauté, les enfants et la techno du quotidien, à des prix raisonnables.">The Freebie Lady Canada is a one-person deal page run from Ontario. I watch
       Amazon.ca price drops and post the ones actually worth buying, mostly home,
       beauty, kids and everyday tech, in the price range real people spend.</p>
-    <p><b>How this works:</b> I don't sell anything and I never ask for your money or
+    <p data-fr="&lt;b&gt;Comment ça fonctionne :&lt;/b&gt; je ne vends rien et je ne vous demande jamais d’argent ni de renseignements personnels. Chaque lien vous mène directement à la page du produit sur Amazon.ca, où vous achetez auprès d’Amazon comme d’habitude. Ce sont des liens d’affiliation; c’est tout le modèle d’affaires."><b>How this works:</b> I don't sell anything and I never ask for your money or
       personal details. Every link sends you straight to the product's own page on
       Amazon.ca, where you buy from Amazon exactly as you normally would. These are
       affiliate links; that's the whole business model.</p>
-    <p><b>Prices change.</b> Amazon moves prices without warning, sometimes within the
+    <p data-fr="&lt;b&gt;Les prix changent.&lt;/b&gt; Amazon modifie ses prix sans préavis, parfois en moins d’une heure. Les montants affichés sont ceux relevés lors de la création de cette liste, alors vérifiez toujours sur Amazon avant d’acheter."><b>Prices change.</b> Amazon moves prices without warning, sometimes within the
       hour. The figures here are what they were when this list was built, so always check
       on Amazon before you buy.</p>
-    <p><b>Questions?</b> Email <a href="mailto:thefreebieladycanada@gmail.com">thefreebieladycanada@gmail.com</a> — a real person answers.</p>
+    <p data-fr="&lt;b&gt;Des questions?&lt;/b&gt; Écrivez à &lt;a href=&quot;mailto:thefreebieladycanada@gmail.com&quot;&gt;thefreebieladycanada@gmail.com&lt;/a&gt;, une vraie personne vous répondra."><b>Questions?</b> Email <a href="mailto:thefreebieladycanada@gmail.com">thefreebieladycanada@gmail.com</a> — a real person answers.</p>
   </section>
 
-  <footer>
+  <footer data-fr="&lt;b&gt;Divulgation d’affiliation :&lt;/b&gt; En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. Chaque lien sur cette page est un lien d’affiliation, sans frais supplémentaires pour vous. Prix en dollars canadiens.">
     <b>Affiliate disclosure:</b> As an Amazon Associate I earn from qualifying purchases. Every link on
     this page is an affiliate link, at no extra cost to you. Prices in Canadian dollars.
   </footer>
 </main>
-<button class="totop" id="toTop" type="button" aria-label="Back to top" hidden>&uarr;</button>
+<button class="totop" id="toTop" type="button" aria-label="Back to top" data-fr-aria="Retour en haut" hidden>&uarr;</button>
 <script type="application/json" id="deals-index">[{"t": "Cards vs Gravity Game", "s": "b0bmgshq12-cards-vs-gravity-game", "p": 45, "d": "2026-09-20"}, {"t": "Correction Tape 4pk + Refills", "s": "b0gq9ycxc5-correction-tape-4pk-refills", "p": 41, "d": "2026-10-12"}, {"t": "Cordless Cat Water Fountain", "s": "b0fnd8j5q2-cordless-cat-water-fountain", "p": 44, "d": "2026-10-12"}, {"t": "Music Trivia Card Game", "s": "b0fl157hpn-music-trivia-card-game", "p": 30, "d": "2026-10-12"}, {"t": "adidas Vibes Chill Zone EDP", "s": "b0d67tvms1-adidas-vibes-chill-zone-edp", "p": 58, "d": "2026-10-12"}, {"t": "Double-Deck Insulated Lunch Box", "s": "b0d2d15s4x-double-deck-insulated-lunch-box", "p": 32, "d": "2026-10-12"}, {"t": "Auto-Clamp Car Charger Mount", "s": "b0c556g5j2-auto-clamp-car-charger-mount", "p": 40, "d": "2026-10-12"}, {"t": "HOPFROG 200pc Magnetic Blocks", "s": "b08x9ydv9n-hopfrog-200pc-magnetic-blocks", "p": 47, "d": "2026-10-12"}, {"t": "Oraimo SpaceBuds ANC Earbuds", "s": "b0g56cbp63-oraimo-spacebuds-anc-earbuds", "p": 79, "d": "2026-10-12"}, {"t": "Rugged Smartwatch, 1400mAh Battery", "s": "b0h8ckkf5w-rugged-smartwatch-1400mah-battery", "p": 81, "d": "2026-10-12"}, {"t": "Cooling Shredded Foam Pillows, 2-Pack", "s": "b0dlwl5z9s-cooling-shredded-foam-pillows-2-pack", "p": 50, "d": "2026-10-12"}, {"t": "Power Bank with 4 Built-in Cables", "s": "b0gjsr2hsy-power-bank-with-4-built-in-cables", "p": 40, "d": "2026-10-12"}, {"t": "Rechargeable Hand Warmers, 2-Pack", "s": "b0h5v9b3jf-rechargeable-hand-warmers-2-pack", "p": 50, "d": "2026-10-12", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Handheld Milk Frother", "s": "b0fn3r1m5x-handheld-milk-frother", "p": 50, "d": "2026-10-12"}, {"t": "Armless Faux Leather Desk Chair", "s": "b0g13xvp7d-armless-faux-leather-desk-chair", "p": 40, "d": "2026-10-12"}, {"t": "Rainbow Scratch Art Books, 2-Pack", "s": "b0dtg9kftg-rainbow-scratch-art-books-2-pack", "p": 50, "d": "2026-10-12"}, {"t": "Bruno Marc Men's Winter Boots", "s": "b0cdq7mxhz-bruno-marc-men-s-winter-boots", "p": 35, "d": "2026-10-12", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "IcyMe Jade Gua Sha", "s": "b091p2xhxb-icyme-jade-gua-sha", "p": 50, "d": "2026-10-12"}, {"t": "Magic Puffy Paint Kit for Kids", "s": "b0hf823h9x-magic-puffy-paint-kit-for-kids", "p": 50, "d": "2026-10-12"}, {"t": "Vicks ZzzQuil Nasal Strips", "s": "b0gx7g3w8c-vicks-zzzquil-nasal-strips", "p": 35, "d": "2026-10-10"}, {"t": "Starfrit Rock Terra 10-Pc Cookware", "s": "b0fx381r3m-starfrit-rock-terra-10-pc-cookware", "p": 41, "d": "2026-10-10"}, {"t": "KAWA 3K Dash Cam", "s": "b0f9whxzy5-kawa-3k-dash-cam", "p": 40, "d": "2026-10-10"}, {"t": "JBL Tune Flex 2 Earbuds", "s": "b0dw97vbwl-jbl-tune-flex-2-earbuds", "p": 36, "d": "2026-10-10"}, {"t": "LEGO Creator Panda Family", "s": "b0dj1b7bc1-lego-creator-panda-family", "p": 32, "d": "2026-10-10"}, {"t": "Razer Viper V3 HyperSpeed Mouse", "s": "b0cf4djm7f-razer-viper-v3-hyperspeed-mouse", "p": 43, "d": "2026-10-10"}, {"t": "NutriBullet 1200W Blender", "s": "b07ylvkbj9-nutribullet-1200w-blender", "p": 43, "d": "2026-10-10"}, {"t": "VANMASS Car Phone Holder", "s": "b07g61yn8k-vanmass-car-phone-holder", "p": 32, "d": "2026-10-10"}, {"t": "Singing Machine Karaoke Mic", "s": "b000xi6o2w-singing-machine-karaoke-mic", "p": 50, "d": "2026-10-10"}, {"t": "AstroAI Snow Brush & Scraper", "s": "b07v37gvy9-astroai-27-snow-brush", "p": 41, "d": "2026-09-15", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "The Uzzle 3.0 Board Game", "s": "b0bfp4vzcp-the-uzzle-3-0-game", "p": 31, "d": "2026-09-13"}, {"t": "Turtle Wax Zip Wax Shampoo 2.5L", "s": "b01d4ub3xu-turtle-wax-zip-wax-2-5l", "p": 33, "d": "2026-09-21"}, {"t": "Irwin ProTouch Coping Saw", "s": "b000b3ar04-irwin-protouch-coping-saw", "p": 44, "d": "2026-10-09"}, {"t": "Shark Cyclone PET Handheld Vac", "s": "b0f3qcwllg-shark-cyclone-pet-handheld-vac", "p": 36, "d": "2026-10-09"}, {"t": "EPAuto Cabin Air Filter, 2pk", "s": "b01lz52iso-epauto-cabin-air-filter-2pk", "p": 35, "d": "2026-10-09"}, {"t": "AstroAI Digital Tire Gauge", "s": "b01ncx3h1g-astroai-digital-tire-gauge", "p": 37, "d": "2026-10-09"}, {"t": "Gaiam Core Sliding Discs, 2pk", "s": "b0964g1n18-gaiam-core-sliding-discs-2pk", "p": 31, "d": "2026-10-09"}, {"t": "Logitech M650 L Wireless Mouse", "s": "b09kx9p829-logitech-m650-l-wireless-mouse", "p": 33, "d": "2026-10-09"}, {"t": "Burt's Bees Farmer Friend Hand Salve", "s": "b00063m2o8-burt-s-bees-farmer-friend-hand-salve", "p": 30, "d": "2026-10-09"}, {"t": "Revlon All-In-One Hot Air Kit", "s": "b084c5m6bw-revlon-all-in-one-hot-air-kit", "p": 43, "d": "2026-10-09"}, {"t": "PELONIS 1500W Ceramic Space Heater", "s": "b08hq279jk-pelonis-1500w-ceramic-space-heater", "p": 31, "d": "2026-10-09", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "OHLUX 55ft Globe String Lights", "s": "b09sfv8qzd-ohlux-55ft-globe-string-lights", "p": 50, "d": "2026-10-09"}, {"t": "Sealy Flannel-to-Sherpa Heated Throw", "s": "b0b28tzkmy-sealy-flannel-to-sherpa-heated-throw", "p": 20, "d": "2026-10-09", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Stanley Quencher H2.0, 40 oz", "s": "b0bqz8xzfb-stanley-quencher-h2-0-40-oz", "p": 15, "d": "2026-10-09"}, {"t": "Govee Smart Plug, 2 Pack", "s": "b0ck28y67d-govee-smart-plug-2-pack", "p": 29, "d": "2026-10-09"}, {"t": "OHLUX 100ft Outdoor String Lights", "s": "b0ct3bjxx1-ohlux-100ft-outdoor-string-lights", "p": 50, "d": "2026-10-09"}, {"t": "Anker 20,000mAh Power Bank, 87W", "s": "b0cxdxp8vr-anker-20-000mah-power-bank-87w", "p": 24, "d": "2026-10-09"}, {"t": "Olay Niacinamide Hydrating Cream", "s": "b0dbm23x51-olay-niacinamide-hydrating-cream", "p": 32, "d": "2026-10-09"}, {"t": "Play-Doh TMNT Pizza Playset", "s": "b0dngdrnls-play-doh-tmnt-pizza-playset", "p": 36, "d": "2026-10-09"}, {"t": "PAW Patrol Holiday Vehicle Bundle", "s": "b0dschgtmc-paw-patrol-holiday-vehicle-bundle", "p": 36, "d": "2026-10-09"}, {"t": "Hot Wheels Premium McLaren F1", "s": "b0f9yzwgvp-hot-wheels-premium-mclaren-f1", "p": 33, "d": "2026-10-09"}, {"t": "Pampers AMORE Size 5, 132 Count", "s": "b0gkc16r95-pampers-amore-size-5-132-count", "p": 35, "d": "2026-10-09"}, {"t": "NIIMBOT B1 Label Maker", "s": "b0bcw4ymr8-niimbot-b1-label-maker", "p": 50, "d": "2026-09-13"}, {"t": "SUPVAN T50M Pro Label Maker", "s": "b0cmzqx234-supvan-label-maker", "p": 40, "d": "2026-09-17"}, {"t": "ProCase Big Pencil Case", "s": "b07kc4tflx-big-pencil-case", "p": 25, "d": "2026-09-13"}, {"t": "Hot Wheels RC Mustang", "s": "b0d9r88p4l-hot-wheels-rc-mustang", "p": 38, "d": "2026-09-11"}, {"t": "LEGO NINJAGO Character Display", "s": "b0fms6w31s-lego-ninjago-display", "p": 33, "d": "2026-09-16"}, {"t": "Kanoodle Brain Teaser", "s": "b000fgecai-kanoodle-brain-teaser", "p": 42, "d": "2026-09-11"}, {"t": "QUNREDA 360\u00b0 Stunt RC Car", "s": "b0ctwhssm8-qunreda-rc-stunt-car", "p": 30, "d": "2026-09-12"}, {"t": "SOL XL Emergency Blanket", "s": "b001mw31xs-sol-emergency-blanket", "p": 32, "d": "2026-09-15"}, {"t": "Big Potato Pounce Card Game", "s": "b0gs6stvcn-big-potato-pounce", "p": 56, "d": "2026-09-19"}, {"t": "Teensymic Washable Makeup Kit", "s": "b0bm8x7tbm-kids-makeup-kit-54pc", "p": 26, "d": "2026-09-22"}, {"t": "Waterproof Playing Cards", "s": "b07lbndhph-waterproof-playing-cards", "p": 36, "d": "2026-09-19"}, {"t": "Pilot Fineliner Pens 12-Pack", "s": "b00008d96h-pilot-fineliners-12", "p": 35, "d": "2026-09-19"}, {"t": "Avent 2-in-1 Warmer & Sterilizer", "s": "b0fy7bsvfg-avent-warmer-sterilizer", "p": 32, "d": "2026-09-19"}, {"t": "ANCEL AD310 OBD2 Scanner", "s": "b01g5ea74i-ancel-ad310-obd2-scanner", "p": 20, "d": "2026-09-24"}, {"t": "LitBear Contoured Sleep Mask", "s": "b09h7fz5jm-litbear-side-sleeper-mask", "p": 15, "d": "2026-09-24"}, {"t": "AstroAI X10 Jump Starter", "s": "b0gpwtrntv-astroai-5000a-jump-starter", "p": 30, "d": "2026-09-25", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Lemon Essential Oil 118 ml", "s": "b0757xl7zh-handcraft-lemon-oil-118ml", "p": 32, "d": "2026-09-24"}, {"t": "Extra-Deep Queen Sheet Set", "s": "b07nvt5ffr-extra-deep-queen-sheet-set", "p": 27, "d": "2026-10-02"}, {"t": "LEGO Messi Soccer Highlights", "s": "b0fnxc51rh-lego-messi-soccer-highlights", "p": 13, "d": "2026-10-02"}, {"t": "LEGO Friends Ice Cream Truck", "s": "b0dj17hw5v-lego-friends-ice-cream-truck", "p": 39, "d": "2026-10-02"}, {"t": "Redoxon Vitamin C Tablets", "s": "b01dkmmdya-redoxon-vitamin-c-tablets", "p": 21, "d": "2026-10-04"}, {"t": "Deconovo Sheer Curtains, 2pk", "s": "b071wlb6h6-deconovo-sheer-curtains-2pk", "p": 43, "d": "2026-10-04"}, {"t": "Remington Shine Therapy 2\" Flat Iron", "s": "b09rtlfv3f-remington-shine-therapy-2-flat-iron", "p": 37, "d": "2026-10-05"}, {"t": "Anker SOLIX C1000 Gen 2", "s": "b0fkb5d9rf-anker-solix-c1000-gen-2", "p": 50, "d": "2026-10-05"}, {"t": "Melissa & Doug Sticker WOW!", "s": "b0cgff2g5v-melissa-doug-sticker-wow", "p": 33, "d": "2026-10-05"}, {"t": "Cetaphil Daily Moisturizer SPF 50", "s": "b00bmjtoic-cetaphil-daily-moisturizer-spf-50", "p": 25, "d": "2026-10-06"}, {"t": "Ninja Foodi Air Fry Oven", "s": "b07scgy2h6-ninja-foodi-air-fry-oven", "p": 13, "d": "2026-10-06"}, {"t": "Apple Pencil (USB-C)", "s": "b0cl7j12yk-apple-pencil-usb-c", "p": 14, "d": "2026-10-06"}, {"t": "Energizer MAX AA, 16 Pack", "s": "b004rff57c-energizer-max-aa-16-pack", "p": 30, "d": "2026-10-06"}, {"t": "Amazon Basics AA Batteries, 20 Pack", "s": "b00ntch52w-amazon-basics-aa-batteries-20-pack", "p": 15, "d": "2026-10-06"}, {"t": "Amazon Basics D Batteries, 4 Pack", "s": "b081fhg5ny-amazon-basics-d-batteries-4-pack", "p": 17, "d": "2026-10-06"}, {"t": "CeraVe Salicylic Acid Cleanser", "s": "b08pr8ysbt-cerave-salicylic-acid-cleanser", "p": 13, "d": "2026-10-06"}, {"t": "Redragon M612 RGB Gaming Mouse", "s": "b08sj5z8jl-redragon-m612-rgb-gaming-mouse", "p": 33, "d": "2026-10-06"}, {"t": "Lysol Wipes Flatpack, Citrus, 4 Pack", "s": "b093tjspms-lysol-wipes-flatpack-citrus-4-pack", "p": 23, "d": "2026-10-06"}, {"t": "CeraVe Hydrating Cream-to-Foam Wash", "s": "b0bl1yb9m2-cerave-hydrating-cream-to-foam-wash", "p": 13, "d": "2026-10-06"}, {"t": "LEGO Minecraft Zombie Dungeon", "s": "b0fms86m4h-lego-minecraft-zombie-dungeon", "p": 30, "d": "2026-10-06"}, {"t": "CeraVe Pimple Patches, 22 ct", "s": "b0fpnvzct3-cerave-pimple-patches-22-ct", "p": 15, "d": "2026-10-06"}, {"t": "AstroAI Windshield Snow Cover", "s": "b098x2qy6z-astroai-windshield-snow-cover", "p": 15, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "AstroAI 2-in-1 Snow Brush & Ice Scraper", "s": "b07vcjsq47-astroai-2-in-1-snow-brush-ice-scraper", "p": 33, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "AstroAI Folding Snow Shovel for Car", "s": "b0fd9wd9ys-astroai-folding-snow-shovel-for-car", "p": 15, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Greenworks Electric Snow Shovel", "s": "b00yypqpdi-greenworks-electric-snow-shovel", "p": 15, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "GoveeLife Smart 3L Humidifier", "s": "b0c2gt613f-goveelife-smart-3l-humidifier", "p": 50, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Duck MAX Window Insulation Kit", "s": "b0dk5xxvtx-duck-max-window-insulation-kit", "p": 16, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Everlasting Comfort Door Draft Stopper", "s": "b0cgjhzbz1-everlasting-comfort-door-draft-stopper", "p": 28, "d": "2026-10-06", "k": "winter ready deals winter-ready snow cold weather"}, {"t": "Cascade Complete Pods, 90 Count", "s": "b06xt4qmhb-cascade-complete-pods-90-count", "p": 20, "d": "2026-10-07"}, {"t": "Pantene Miracle Rescue Hair Mask", "s": "b0crj3gkf9-pantene-miracle-rescue-hair-mask", "p": 17, "d": "2026-10-07"}, {"t": "Dreame H12 FlexReach Wet Dry Vacuum", "s": "b0fbw3yf8n-dreame-h12-flexreach-wet-dry-vacuum", "p": 15, "d": "2026-10-07"}, {"t": "JBL Tune 720BT Headphones", "s": "b0ctbcdd6d-jbl-tune-720bt-headphones", "p": 45, "d": "2026-10-08"}, {"t": "JBL Go 4 Speaker", "s": "b0ctnwbt1z-jbl-go-4-speaker", "p": 43, "d": "2026-10-08"}, {"t": "Sony XB100 Speaker", "s": "b0c296vd7t-sony-xb100-speaker", "p": 40, "d": "2026-10-08"}, {"t": "Logitech G502 Hero Mouse", "s": "b07gbz4q68-logitech-g502-hero-mouse", "p": 53, "d": "2026-10-08"}, {"t": "Casio MH-10M Calculator", "s": "b08z79z2n9-casio-mh-10m-calculator", "p": 55, "d": "2026-10-08"}, {"t": "BIC Wite-Out Tape, 10pk", "s": "b002mgjzre-bic-wite-out-tape-10pk", "p": 36, "d": "2026-10-08"}, {"t": "Roborock Q7 L5 Robot Vacuum & Mop", "s": "b0dslbfrng-roborock-q7-l5-robot-vacuum", "p": 35, "d": "2026-10-04"}, {"t": "Dyson Car+Boat Handheld Vacuum", "s": "b0dlxgdhbx-dyson-car-boat-handheld-vac", "p": 39, "d": "2026-10-06"}, {"t": "Ziploc Twist N Loc Containers, 9pk", "s": "b0fxnlyct2-ziploc-twist-n-loc-containers-9pk", "p": 10, "d": "2026-10-07"}, {"t": "LANBAOSI Kids' Thermal Compression Set", "s": "b0ckz2qcpz-lanbaosi-kids-thermal-compression-set", "p": 21, "d": "2026-10-07", "k": "winter ready deals winter-ready snow cold weather kids thermal wear warm kids clothes"}, {"t": "Roadbox Boys' Thermal Set", "s": "b0cc21lzc7-roadbox-boys-thermal-set", "p": 27, "d": "2026-10-07", "k": "winter ready deals winter-ready snow cold weather kids thermal wear warm kids clothes"}, {"t": "SharkMatrix Plus Robot Vacuum & Mop", "s": "b0djt8xfdv-sharkmatrix-plus-robot-vacuum-mop", "p": 49, "d": "2026-10-07"}, {"t": "Dyson V9 Submarine Wet & Dry Vacuum", "s": "b0gj39m4fl-dyson-v9-submarine-wet-dry-vacuum", "p": 43, "d": "2026-10-07"}, {"t": "Bissell PowerClean Cordless Vacuum", "s": "b0fl84hywm-bissell-powerclean-cordless-vacuum", "p": 37, "d": "2026-10-07"}, {"t": "Glade Aqua Waves Room Spray", "s": "b0bpk28tnr-glade-room-spray", "p": 54, "d": "2026-09-13"}, {"t": "Duracell Coppertop AA, 8 Pack", "s": "b003si0td4-duracell-aa-8-pack", "p": 33, "d": "2026-09-12"}, {"t": "Cascade Platinum Plus Pods, 51", "s": "b0cw2r7ttk-cascade-platinum-plus-pods-51", "p": 20, "d": "2026-10-02"}, {"t": "Shark FlexStyle Air Styler", "s": "b0bdt66j9y-shark-flexstyle-air-styler", "p": 38, "d": "2026-10-06"}, {"t": "Lysol Brand New Day Spray, Coconut", "s": "b0cp9q2hsg-lysol-brand-new-day-spray-coconut", "p": 34, "d": "2026-10-06"}, {"t": "Apple AirTag 4 Pack (2nd gen)", "s": "b0gjtktlkq-apple-airtag-4-pack-2nd-gen", "p": 15, "d": "2026-10-06"}, {"t": "Apple AirTag (2nd gen)", "s": "b0gjty1qyx-apple-airtag-2nd-gen", "p": 18, "d": "2026-10-06"}, {"t": "Scotch-Brite Mini Lint Rollers, 24", "s": "b00e86sodc-scotch-brite-mini-lint-rollers-24", "p": 30, "d": "2026-10-06"}, {"t": "Swiffer Duster Kit, 3 ft Handle", "s": "b01bum2llm-swiffer-duster-kit-3-ft-handle", "p": 38, "d": "2026-10-06"}, {"t": "Windex Glass Cleaner, 3 Pack", "s": "b07hpxpk2c-windex-glass-cleaner-3-pack", "p": 36, "d": "2026-10-06"}, {"t": "Duracell Coppertop 9V, 4 Pack", "s": "b07mws47ty-duracell-coppertop-9v-4-pack", "p": 21, "d": "2026-10-06"}, {"t": "Duracell 2032 Lithium, 4 Pack", "s": "b08gmdf4lt-duracell-2032-lithium-4-pack", "p": 21, "d": "2026-10-06"}, {"t": "Command 10 lb XL Wall Hook", "s": "b09xjdkmxs-command-10-lb-xl-wall-hook", "p": 28, "d": "2026-10-06"}, {"t": "Swiffer PowerMop Multi-Surface Kit", "s": "b0dbr8ths3-swiffer-powermop-multi-surface-kit", "p": 25, "d": "2026-10-06"}, {"t": "LEGO City Holiday Camper Van", "s": "b0dj19fvrd-lego-city-holiday-camper-van", "p": 35, "d": "2026-10-06"}, {"t": "LEGO Harry Potter Herbology Class", "s": "b0drw5h79h-lego-harry-potter-herbology-class", "p": 33, "d": "2026-10-06"}, {"t": "LEGO Creator 3-in-1 Beautiful Horse", "s": "b0drw6g8f7-lego-creator-3-in-1-beautiful-horse", "p": 34, "d": "2026-10-06"}, {"t": "LEGO Super Mario Kart: Mario & Kart", "s": "b0ds2tswp1-lego-super-mario-kart-mario-kart", "p": 31, "d": "2026-10-06"}, {"t": "LEGO Lucky Cat", "s": "b0fcy8cnn4-lego-lucky-cat", "p": 37, "d": "2026-10-06"}, {"t": "LEGO Speed Champions McLaren W1", "s": "b0fms87vkq-lego-speed-champions-mclaren-w1", "p": 20, "d": "2026-10-06"}, {"t": "100 ft Permanent RGB Eave Lights", "s": "b0h83mj78k-100-ft-permanent-rgb-eave-lights", "p": 10, "d": "2026-10-06"}, {"t": "LEGO City Monster Truck", "s": "b0cgyn1gj5-lego-city-blue-monster-truck", "p": 27, "d": "2026-09-17"}, {"t": "JOYAL Hyaluronic Acid Serum", "s": "b07sh2m7d2-joyal-hyaluronic-serum", "p": 33, "d": "2026-09-24"}, {"t": "Shark Vertex Pro Cordless Vac", "s": "b098rh3ltb-shark-vertex-pro-cordless-vac", "p": 17, "d": "2026-10-04"}, {"t": "Beats Studio Pro Headphones", "s": "b0c8pr4w22-beats-studio-pro-headphones", "p": 43, "d": "2026-10-05"}, {"t": "Play-Doh Hair Stylin' Salon", "s": "b0c34rz84m-play-doh-hair-stylin-salon", "p": 42, "d": "2026-10-04"}, {"t": "KPop Demon Hunters HUNTR/X Set", "s": "b0gbzjllcd-kpop-demon-hunters-huntr-x-set", "p": 30, "d": "2026-10-05"}, {"t": "Barbie Twinning Looks + Dog", "s": "b0dpqgbt1g-barbie-twinning-looks-dog", "p": 34, "d": "2026-10-04"}, {"t": "Melissa & Doug Fresh Mart Set", "s": "b072pzklx9-melissa-doug-fresh-mart-set", "p": 20, "d": "2026-10-05"}, {"t": "Ninja PossibleCooker PRO", "s": "b0bdslfxq1-ninja-possiblecooker-pro", "p": 30, "d": "2026-10-05"}, {"t": "Ninja BL660C Pro Blender", "s": "b0741vxtpw-ninja-bl660c-pro-blender", "p": 44, "d": "2026-10-05"}, {"t": "LEGO Friends Cat Birthday Party", "s": "b0drw76bwf-lego-friends-cat-birthday-party", "p": 29, "d": "2026-10-05"}, {"t": "Hoover CleanSlate Spot Cleaner", "s": "b09p9v1n7s-hoover-cleanslate-spot-cleaner", "p": 42, "d": "2026-10-05"}, {"t": "Cordless Leaf Blower + Battery", "s": "b0h6zn8s7n-cordless-leaf-blower-battery", "p": 50, "d": "2026-10-04"}, {"t": "Mini Projector, 1080P", "s": "b0hf7p3fdh-mini-projector-1080p", "p": 18, "d": "2026-10-04"}, {"t": "Roller Ball Massager", "s": "b08ynznk6s-roller-ball-massager", "p": 20, "d": "2026-10-04"}, {"t": "Nutri Ninja Pro Blender", "s": "b01bpwug6y-nutri-ninja-pro-blender", "p": 12, "d": "2026-10-04"}, {"t": "Bamboo Toddler Kitchen Tower", "s": "b0d53n7djv-bamboo-toddler-kitchen-tower", "p": 10, "d": "2026-10-04"}, {"t": "Shuttle Art Erasers, 120pk", "s": "b08bhk7bms-pink-erasers-120-pack", "p": 34, "d": "2026-09-15"}, {"t": "KinCam Recliner Cover", "s": "b0c335ljk3-stretch-recliner-cover", "p": 32, "d": "2026-09-14"}, {"t": "LEGO Technic Jeep Wrangler", "s": "b0fmyt1fjs-lego-technic-jeep-42227", "p": 31, "d": "2026-09-20"}, {"t": "Siwyit Quick-Dry Gel Pens, 6pk", "s": "b0g4rh243m-siwyit-quick-dry-gel-pens-6pk", "p": 46, "d": "2026-10-02"}, {"t": "JBL Live 680NC Headphones", "s": "b0gllf8sl6-jbl-live-680nc-headphones", "p": 32, "d": "2026-10-02"}, {"t": "Shark Navigator Lift-Away", "s": "b004q4drjw-shark-navigator-lift-away", "p": 46, "d": "2026-10-02"}, {"t": "Squishy Stress Cube", "s": "b0drfxm3sd-squishy-stress-cube", "p": 21, "d": "2026-10-02"}, {"t": "Ninja Express Chop", "s": "b01irjfrbc-ninja-express-chop", "p": 25, "d": "2026-10-02"}, {"t": "LZHOME Hexagon Garage Light", "s": "b0c9kmh6nt-lzhome-hexagon-garage-light", "p": 18, "d": "2026-10-02"}, {"t": "LEGO Minecraft Trial Chamber", "s": "b0dj1ctjk8-lego-minecraft-trial-chamber", "p": 10, "d": "2026-10-02"}, {"t": "LEGO Sonic: Cyclone vs. Metal Sonic", "s": "b0dj19fpqg-lego-sonic-cyclone-vs-metal-sonic", "p": 40, "d": "2026-10-02"}, {"t": "LEGO Minecraft Woodland Mansion", "s": "b0dj1bgvqy-lego-minecraft-woodland-mansion", "p": 36, "d": "2026-10-02"}, {"t": "Forehead & Ear Thermometer", "s": "b0fdwlgdct-ear-forehead-thermometer", "p": 31, "d": "2026-09-20"}, {"t": "Sharpie Ultra Fine, 12 Black", "s": "b00006ifi3-sharpie-ultra-fine-12-black", "p": 38, "d": "2026-10-01"}, {"t": "Wet Ones Hand Wipes, 10 Packs", "s": "b01bspp56e-wet-ones-hand-wipes-10-packs", "p": 53, "d": "2026-10-01"}, {"t": "Ninja Sip Perfect Travel Mug", "s": "b0dlq7cg9n-ninja-sip-perfect-travel-mug", "p": 44, "d": "2026-10-01"}, {"t": "Fellowes Plush Wrist Rest", "s": "b015wia61c-fellowes-plush-wrist-rest", "p": 47, "d": "2026-09-21"}, {"t": "Expandable Insulated Lunch Bag", "s": "b09y93rgjc-expandable-lunch-bag", "p": 41, "d": "2026-09-19"}, {"t": "Turtle Wax Max Power Car Wash", "s": "b01cad5q1m-turtle-wax-max-power-wash", "p": 16, "d": "2026-09-21"}, {"t": "Bright Starts Flamingo Bouncer", "s": "b0812ftl5m-flamingo-baby-bouncer", "p": 24, "d": "2026-09-20"}, {"t": "Hill's Soft Savories Dog Treats", "s": "b00nmmsrje-hill-s-soft-savories-dog-treats", "p": 36, "d": "2026-09-30"}, {"t": "POWEROWL AAA Rechargeables, 24", "s": "b07bscgl5s-powerowl-aaa-rechargeables-24", "p": 32, "d": "2026-09-30"}, {"t": "JOYIN Rock Painting Kit", "s": "b08hd89cx6-rock-painting-kit", "p": 29, "d": "2026-09-11"}, {"t": "Kids Doodle Board Tablet", "s": "b0b12hm8fd-lcd-doodle-board", "p": 39, "d": "2026-09-19"}, {"t": "TOOLF 4-Tier Rolling Cart", "s": "b0b8fxbc71-4-tier-rolling-cart", "p": 20, "d": "2026-09-19"}, {"t": "Greenworks 48V Leaf Blower", "s": "b08qc9l9cd-greenworks-48v-leaf-blower", "p": 30, "d": "2026-09-29"}, {"t": "Frida Baby NailFrida Clipper", "s": "b0dmtx1rtq-frida-baby-nail-clipper-set", "p": 35, "d": "2026-09-18"}, {"t": "Nina Ottosson Dog Twister", "s": "b0719q89x8-dog-twister-puzzle-toy", "p": 37, "d": "2026-09-18"}, {"t": "Intex Queen Air Mattress", "s": "b0bfftqr34-intex-queen-air-mattress", "p": 14, "d": "2026-09-27"}, {"t": "Ninja DualZone 10-Qt Air Fryer", "s": "b0h7csmxt9-ninja-dualzone-10-qt-air-fryer", "p": 31, "d": "2026-09-27"}, {"t": "Hill's Soft-Baked Dog Treats", "s": "b00duriqoc-hill-s-soft-baked-dog-treats", "p": 43, "d": "2026-09-27"}, {"t": "LEGO Wicked Elphaba's Retreat", "s": "b0drw7d2p7-lego-wicked-elphaba-s-retreat", "p": 40, "d": "2026-09-27"}, {"t": "4K Front/Rear Dash Cam", "s": "b0hbql8q6s-4k-front-rear-dash-cam", "p": 14, "d": "2026-09-26"}, {"t": "Filtered Handheld Shower Head", "s": "b0d1p1xxkd-filtered-handheld-shower-head", "p": 15, "d": "2026-09-26"}, {"t": "YADIFEN Wool Socks, 5 Pairs", "s": "b0d93d6ppk-yadifen-wool-socks-5-pairs", "p": 33, "d": "2026-09-26"}, {"t": "Vanlgs 13-Pc Home Pilates Kit", "s": "b0gt4vdxxl-vanlgs-13-pc-home-pilates-kit", "p": 20, "d": "2026-09-18"}, {"t": "Post-it Lined Notes, 4 Pads", "s": "b0bpjvcvzd-post-it-lined-notes-4-pads", "p": 36, "d": "2026-09-14"}, {"t": "Sticky Notes, 12 Pads", "s": "b0007ltnxc-sticky-notes-12-pads", "p": 46, "d": "2026-09-13"}, {"t": "Mjkone U-Shape Sectional Sofa", "s": "b0gszkgp82-mjkone-u-shape-sectional-sofa", "p": 44, "d": "2026-09-18"}, {"t": "Clamp-On Architect Desk Lamp", "s": "b0brcjl4mm-clamp-on-desk-lamp-24w", "p": 40, "d": "2026-09-16"}, {"t": "JBL Tune 520BT Headphones", "s": "b0c1hgkng7-jbl-tune-520bt-headphones", "p": 43, "d": "2026-09-18"}, {"t": "Pentel EnerGel Pens, 12-Pack", "s": "b00006jnik-pentel-energel-pens-12-pack", "p": 13, "d": "2026-09-15"}, {"t": "99pc Drill Bit Set", "s": "b07qcp1rg1-99pc-drill-bit-set", "p": 41, "d": "2026-09-12"}, {"t": "IRWIN Drywall Jab Saw", "s": "b000b3csm4-irwin-drywall-jab-saw", "p": 41, "d": "2026-09-12"}, {"t": "Aurora 8-Sheet Shredder", "s": "b01lwwleet-8-sheet-shredder", "p": 28, "d": "2026-09-13"}, {"t": "Jenga, Official Hasbro", "s": "b0d87pkyyk-jenga-official-hasbro", "p": 13, "d": "2026-09-11"}, {"t": "KUNOVA Acupressure Mat", "s": "b08k41zcdt-acupressure-mat-cushion", "p": 37, "d": "2026-09-12"}, {"t": "Anecdote 2026\u201327 Planner", "s": "b08999gf4r-anecdote-2026-27-planner", "p": 23, "d": "2026-09-15"}, {"t": "4 Monster Trucks, Set", "s": "b08gx3yb5v-4-monster-trucks-set", "p": 33, "d": "2026-09-11"}, {"t": "Windshield Shade, 2-Pk", "s": "b079j89sj3-windshield-shade-2-pk", "p": 47, "d": "2026-09-18"}, {"t": "Avery Highlighters, 4-Pack", "s": "b007z7n5zi-avery-highlighters-4-pack", "p": 33, "d": "2026-09-18"}, {"t": "Candle Warmer Lamp", "s": "b0ctjgjl2t-candle-warmer-lamp", "p": 24, "d": "2026-09-13"}, {"t": "Oxford Notebooks, 12-Pack", "s": "b0b9w6qdpy-oxford-notebooks-12-pack", "p": 30, "d": "2026-09-14"}, {"t": "Foam Glider Planes", "s": "b08hdhnc7q-foam-glider-planes", "p": 30, "d": "2026-09-11"}, {"t": "Marina Filter Cartridges", "s": "b0032ged02-marina-filter-cartridges", "p": 30, "d": "2026-09-14"}, {"t": "Blink Outdoor 4 + Wired Doorbell 2K+ Bundle", "s": "b0h1h6m135-blink-outdoor-4-wired-doorbell-2k-bundle", "p": 39, "d": "2026-09-23"}, {"t": "3lb Drilling Hammer", "s": "b00433sc4q-3lb-drilling-hammer", "p": 51, "d": "2026-09-22"}, {"t": "CRAFTSMAN Tape, 25 Ft", "s": "b0cp67qwly-craftsman-tape-25-ft", "p": 48, "d": "2026-09-21"}, {"t": "DEWALT Jobsite Speaker", "s": "b07jnkj23z-dewalt-jobsite-speaker", "p": 42, "d": "2026-09-22"}, {"t": "4-Channel 4K Dash Cam", "s": "b0grwbjjsm-4-channel-4k-dash-cam", "p": 13, "d": "2026-09-21"}, {"t": "Fiskars Shop Shears", "s": "b01mu7c7mz-fiskars-shop-shears", "p": 36, "d": "2026-09-21"}, {"t": "4pc Wood Chisel Set", "s": "b07ggynhsq-4pc-wood-chisel-set", "p": 37, "d": "2026-09-22"}, {"t": "B+D 20V Charger", "s": "b07799rl2b-b-d-20v-charger", "p": 36, "d": "2026-09-22"}, {"t": "Paper Mate Pens, 60-Count", "s": "b001pmgb2i-paper-mate-pens-60-count", "p": 35, "d": "2026-09-23"}, {"t": "Tapo Solar Pan/Tilt Cam Kit", "s": "b0g1v4hfp4-tapo-solar-pan-tilt-cam-kit", "p": 33, "d": "2026-09-23"}, {"t": "Omega Paw Litter Mat", "s": "b0002aqq56-omega-paw-litter-mat", "p": 30, "d": "2026-09-23"}, {"t": "Digital Multimeter", "s": "b08cx9w7g3-digital-multimeter", "p": 30, "d": "2026-09-21"}, {"t": "XL Moist/Dry Heating Pad", "s": "b0cn92yypm-xl-moist-dry-heating-pad", "p": 57, "d": "2026-09-24"}, {"t": "New Balance Boys' Briefs 4pk", "s": "b08mb9d86x-new-balance-boys-briefs-4pk", "p": 45, "d": "2026-09-24"}, {"t": "Reusable Ice Packs, 2-Pack", "s": "b092vc995w-reusable-ice-packs-2-pack", "p": 30, "d": "2026-09-24"}, {"t": "Pastel Binder Divider Sleeves", "s": "b0h2pc1bj3-pastel-binder-divider-sleeves", "p": 17, "d": "2026-09-25"}, {"t": "SunWorks Construction Paper", "s": "b001c5tw42-sunworks-construction-paper", "p": 49, "d": "2026-09-24"}, {"t": "Jadfezy 1080P Action Camera", "s": "b09qd34363-jadfezy-1080p-action-camera", "p": 40, "d": "2026-09-25"}, {"t": "71\" Phone Tripod & Selfie Stick", "s": "b0c6kdqqmd-71-phone-tripod-selfie-stick", "p": 27, "d": "2026-09-25"}, {"t": "Arm & Hammer Lavender Litter", "s": "b09f8nlgcd-arm-hammer-lavender-litter", "p": 34, "d": "2026-09-25"}, {"t": "Construction Paper, 96", "s": "b007z7nvfm-construction-paper-96", "p": 23, "d": "2026-09-17"}, {"t": "Mothers Carnauba Wax", "s": "b0002u1tvw-mothers-carnauba-wax", "p": 55, "d": "2026-09-17"}, {"t": "QSLKING 30PCS Car Detailing Brush Set", "s": "b0fgw1gldn-qslking-30pcs-car-detailing-brush-set", "p": 19, "d": "2026-09-17"}, {"t": "Pentel Orenz Nero 0.5mm", "s": "b08jyh88g6-pentel-orenz-nero-0-5mm", "p": 49, "d": "2026-09-17"}, {"t": "Storage Bags, 6 Pack", "s": "b0cgxt9pgr-storage-bags-6-pack", "p": 48, "d": "2026-09-17"}, {"t": "Baby Feeding Set, 10pc", "s": "b0bz4bg9zt-baby-feeding-set-10pc", "p": 24, "d": "2026-09-17"}, {"t": "BeeVines Satin Scrunchies, 60-Pack", "s": "b07wjbfdhj-beevines-satin-scrunchies-60-pack", "p": 13, "d": "2026-09-17"}, {"t": "Toodour Solar Halloween Lights, 12-Pack", "s": "b09pl3zth4-toodour-solar-halloween-lights-12-pack", "p": 17, "d": "2026-09-17"}, {"t": "Batman: The Long Halloween", "s": "1799502880-batman-the-long-halloween", "p": 10, "d": "2026-09-17"}, {"t": "UGREEN 7-in-1 dock", "s": "b0d1xskzrj-ugreen-7-in-1-dock", "p": 43, "d": "2026-09-11"}, {"t": "12V Battery Maintainer", "s": "b0gtvqlnsv-12v-battery-maintainer", "p": 48, "d": "2026-09-12"}, {"t": "Family Document Wallet", "s": "b092mn4hrn-family-document-wallet", "p": 37, "d": "2026-09-12"}, {"t": "Ergonomic Office Chair", "s": "b0f5n6vv8l-ergonomic-office-chair", "p": 10, "d": "2026-09-16"}, {"t": "BISSELL Featherweight Turbo", "s": "b07w5rgrb5-bissell-featherweight-turbo", "p": 10, "d": "2026-09-13"}, {"t": "Gua sha facial set, 2 pack", "s": "b0f8vqpm3q-gua-sha-facial-set-2-pack", "p": 36, "d": "2026-09-11"}, {"t": "Kensington Laptop Lock", "s": "b005j7y99w-kensington-laptop-lock", "p": 15, "d": "2026-09-13"}, {"t": "18\" Hedge Trimmer", "s": "b0030bg1bi-18-hedge-trimmer", "p": 12, "d": "2026-09-13"}, {"t": "B+D 3-in-1 Leaf Blower", "s": "b00tqn06yw-b-d-3-in-1-leaf-blower", "p": 41, "d": "2026-09-14"}, {"t": "Tetley Peppermint Tea, 40", "s": "b073fsh1wq-tetley-peppermint-tea-40", "p": 41, "d": "2026-09-14"}, {"t": "Clover Leaf Tuna, 24 Cans", "s": "b07656bf1l-clover-leaf-tuna-24-cans", "p": 48, "d": "2026-09-14"}, {"t": "UGREEN USB 3.0 Switch", "s": "b0c8msp967-ugreen-usb-3-0-switch", "p": 33, "d": "2026-09-11"}, {"t": "Morocco Gold Olive Oil", "s": "b07gbjlffq-morocco-gold-olive-oil", "p": 39, "d": "2026-09-15"}, {"t": "Logitech C270 HD Webcam", "s": "b004fho5y6-logitech-c270-hd-webcam", "p": 30, "d": "2026-09-11"}, {"t": "Rimmel Lasting Finish Lipstick", "s": "b0fv4lntm1-rimmel-lasting-finish-lipstick", "p": 38, "d": "2026-09-11"}, {"t": "20,000mAh Power Bank", "s": "b0cjbqbb7f-20-000mah-power-bank", "p": 38, "d": "2026-09-12"}, {"t": "8-Bay Battery Charger", "s": "b07jjt7ggf-8-bay-battery-charger", "p": 38, "d": "2026-09-12"}, {"t": "Wireless Charging Stand", "s": "b0769jn5mg-wireless-charging-stand", "p": 20, "d": "2026-09-12"}, {"t": "Dole Juice, 12 Bottles", "s": "b008lh97su-dole-juice-12-bottles", "p": 38, "d": "2026-09-14"}, {"t": "16 Rechargeable AAs", "s": "b07mq8yrf3-16-rechargeable-aas", "p": 36, "d": "2026-09-12"}, {"t": "Sunrise Alarm Clock", "s": "b09yhbrhc4-sunrise-alarm-clock", "p": 33, "d": "2026-09-12"}, {"t": "Crochet Hook Set, 9 Sizes", "s": "b08fjb44xq-crochet-hook-set-9-sizes", "p": 36, "d": "2026-09-13"}, {"t": "Memory Foam Pillow", "s": "b08fj9737f-memory-foam-pillow", "p": 35, "d": "2026-09-13"}, {"t": "18x12 Cutting Mat, A3", "s": "b08dhdzkgs-18x12-cutting-mat-a3", "p": 36, "d": "2026-09-15"}, {"t": "Nestl\u00e9 Minis, 120 Count", "s": "b08jncs3wx-nestl-minis-120-count", "p": 37, "d": "2026-09-15"}, {"t": "MATEIN 17\" Laptop Pack", "s": "b07qn9npkn-matein-17-laptop-pack", "p": 34, "d": "2026-09-12"}, {"t": "RFID Passport Holder", "s": "b07kyc3c7z-rfid-passport-holder", "p": 38, "d": "2026-09-12"}, {"t": "Padded 6ft Dog Leash", "s": "b09wy3ghhl-padded-6ft-dog-leash", "p": 23, "d": "2026-09-14"}, {"t": "USB-C Power Bar, 6ft", "s": "b0bmf7pj4x-usb-c-power-bar-6ft", "p": 32, "d": "2026-09-12"}, {"t": "61\" Heavy-Duty Cat Tower", "s": "b0fd9vp3b2-61-heavy-duty-cat-tower", "p": 24, "d": "2026-09-14"}, {"t": "Touch Lamp + USB Ports", "s": "b0bzxnsw5k-touch-lamp-usb-ports", "p": 25, "d": "2026-09-14"}, {"t": "Whipped Beef Tallow Skin Balm", "s": "b0brtqyjzl-whipped-beef-tallow-skin-balm", "p": 45, "d": "2026-09-23"}]</script>
 <script>
 (function(){
@@ -2039,6 +2054,69 @@ footer b{color:var(--ink); font-weight:600}
   var idx = [];
   try { idx = JSON.parse(document.getElementById('deals-index').textContent) || []; } catch (err) {}
   var st = {f:'all', q:'', sort:'new', limit:PAGE};
+
+  // ---- English / French toggle (12 Oct 2026) ----
+  // Static text carries its French in data-fr / data-fr-ph / data-fr-aria;
+  // card text is swapped by class below. Product names stay as Amazon lists
+  // them. In French, Amazon links open the French amazon.ca (language=fr_CA);
+  // the tag is untouched. Choice is remembered per browser; first visit
+  // follows the browser language, or ?lang=fr / ?lang=en.
+  var LANG = 'en';
+  var FR = {deal:'aubaine', deals:'aubaines', shop:'Voir l’aubaine', tab:' (ouvre Amazon.ca dans un nouvel onglet)',
+    details:'Détails', dead:'Signaler expirée', copy:'Copier', copied:'Copié!', newt:'Nouveau aujourd’hui',
+    'Use code at checkout':'Code à entrer à la caisse', 'Clip coupon + use code':'Activez le coupon + entrez le code',
+    'Use code':'Code promo', 'Coupon + code':'Coupon + code', 'Codes can expire':'Les codes peuvent expirer',
+    'Clip the coupon on the Amazon page':'Activez le coupon sur la page Amazon',
+    'Coupons can end anytime':'Les coupons peuvent prendre fin en tout temps',
+    'Member price':'Prix membre', 'needs a membership':'abonnement requis',
+    'before code':'avant le code', 'before coupon':'avant le coupon', 'was':'avant'};
+  var MO = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  function fr(){ return LANG === 'fr'; }
+  function money(t){
+    if (!fr()) return t;
+    var n = parseFloat(String(t).replace(/[^0-9.]/g, ''));
+    return isNaN(n) ? t : n.toLocaleString('fr-CA', {minimumFractionDigits:2, maximumFractionDigits:2}) + '\u00a0$';
+  }
+  function sw(el, attr, val){ var k = 'en' + attr.replace(/-/g, ''); if (el.dataset[k] === undefined) el.dataset[k] = el.getAttribute(attr) || ''; el.setAttribute(attr, val === null ? el.dataset[k] : val); }
+  function txt(el, frText){ if (!el) return; if (el.dataset.en === undefined) el.dataset.en = el.innerHTML; el.innerHTML = fr() ? frText : el.dataset.en; }
+  function applyLang(l){
+    LANG = l === 'fr' ? 'fr' : 'en';
+    document.documentElement.lang = fr() ? 'fr-CA' : 'en-CA';
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang') === LANG ? 'true' : 'false'); });
+    document.querySelectorAll('[data-fr]').forEach(function(el){ txt(el, el.getAttribute('data-fr')); });
+    document.querySelectorAll('[data-fr-ph]').forEach(function(el){ sw(el, 'placeholder', fr() ? el.getAttribute('data-fr-ph') : null); });
+    document.querySelectorAll('[data-fr-aria]').forEach(function(el){ sw(el, 'aria-label', fr() ? el.getAttribute('data-fr-aria') : null); });
+    document.querySelectorAll('a[href*="amazon.ca"]').forEach(function(a){
+      var h = a.dataset.enhref || (a.dataset.enhref = a.getAttribute('href'));
+      if (!fr()) { a.setAttribute('href', h); return; }
+      a.setAttribute('href', /language=en_CA/.test(h) ? h.replace('language=en_CA', 'language=fr_CA') : h + (h.indexOf('?') < 0 ? '?' : '&') + 'language=fr_CA');
+    });
+    cards.forEach(function(li){
+      li.querySelectorAll('.shop').forEach(function(a){ txt(a, FR.shop + ' <span aria-hidden="true">&rarr;</span><span class="vh">' + FR.tab + '</span>'); });
+      var links = li.querySelectorAll('.clinks a');
+      if (links[0]) txt(links[0], FR.details);
+      if (links[1]) txt(links[1], FR.dead);
+      li.querySelectorAll('.olabel .lg, .olabel .sm, .omuted, .wlbl, .prices .vh').forEach(function(el){
+        var en = el.dataset.en !== undefined ? el.dataset.en : el.innerHTML;
+        var key = en.trim();
+        txt(el, (FR[key] || key) + (/\s$/.test(en) ? ' ' : ''));
+      });
+      var ol = li.querySelector('p.offer .olabel');
+      if (ol && !ol.querySelector('.lg')) txt(ol, FR[ol.textContent.trim()] || ol.textContent);
+      li.querySelectorAll('.copy').forEach(function(b){ b.textContent = fr() ? FR.copy : 'Copy';
+        sw(b, 'aria-label', fr() ? 'Copier le code ' + b.getAttribute('data-code') : null); });
+      li.querySelectorAll('.now, .was').forEach(function(el){ if (el.dataset.en === undefined) el.dataset.en = el.textContent; el.textContent = fr() ? money(el.dataset.en) : el.dataset.en; });
+      var pct = li.querySelector('.pct'); if (pct) { if (pct.dataset.en === undefined) pct.dataset.en = pct.innerHTML; pct.innerHTML = fr() ? pct.dataset.en.replace('%', '\u00a0%') : pct.dataset.en; }
+      var when = li.querySelector('.cmeta > span:first-child');
+      if (when && !when.classList.contains('clinks')) {
+        var ad = li._added, d = ad.split('-');
+        txt(when, when.classList.contains('new') ? FR.newt : (d.length === 3 ? 'Ajouté le ' + (+d[2]) + ' ' + MO[+d[1] - 1] : when.textContent));
+      }
+    });
+    try { localStorage.setItem('fblLang', LANG); } catch (e) {}
+    render();
+  }
+
 
   cards.forEach(function(li, i){
     var n = li.querySelector('.name');
@@ -2070,14 +2148,15 @@ footer b{color:var(--ink); font-weight:600}
     var keep = {};
     list.forEach(function(li, k){ grid.appendChild(li); li.hidden = k >= st.limit; keep[li._i] = 1; });
     cards.forEach(function(li){ if (!keep[li._i]) li.hidden = true; });
-    var label = list.length === 1 ? ' deal' : ' deals';
+    var label = fr() ? (list.length === 1 ? ' aubaine' : ' aubaines') : (list.length === 1 ? ' deal' : ' deals');
     countEl.innerHTML = list.length > showing
-      ? 'Showing <b>' + showing + '</b> of <b>' + list.length + '</b>' + label
+      ? (fr() ? '<b>' + showing + '</b> sur <b>' + list.length + '</b>' + label + ' affichées'
+              : 'Showing <b>' + showing + '</b> of <b>' + list.length + '</b>' + label)
       : '<b>' + list.length + '</b>' + label;
     emptyEl.hidden = list.length > 0;
     var left = list.length - showing;
     moreBtn.hidden = left <= 0;
-    moreBtn.textContent = 'Show more deals (' + left + ' more)';
+    moreBtn.textContent = fr() ? 'Afficher plus d’aubaines (' + left + ' de plus)' : 'Show more deals (' + left + ' more)';
     renderArchive(list.length);
   }
 
@@ -2089,14 +2168,19 @@ footer b{color:var(--ink); font-weight:600}
     var m = idx.filter(function(it){
       return it.s && !onPage[it.s] && ((it.t || '') + ' ' + (it.k || '')).toLowerCase().indexOf(q) !== -1;
     }).slice(0, 8);
-    var word = '&ldquo;' + esc(q) + '&rdquo;';
-    var h = n > 0
+    var typed = input.value.trim();
+    var word = fr() ? '«&nbsp;' + esc(typed) + '&nbsp;»' : '&ldquo;' + esc(typed) + '&rdquo;';
+    var h = fr() ? (n > 0
+      ? '<p class="srsum"><b>' + n + (n === 1 ? ' aubaine' : ' aubaines') + '</b> sur cette page ' + (n === 1 ? 'correspond' : 'correspondent') + ' à ' + word + '.</p>'
+      : (m.length ? '<p class="srsum">Rien d’actuel ne correspond à ' + word + ', mais ces anciennes aubaines oui (les prix ont pu changer)&nbsp;:</p>'
+                  : '<p class="srsum">Aucune aubaine ne correspond à ' + word + ' pour l’instant. Essayez un mot plus court ou une marque.</p>'))
+      : n > 0
       ? '<p class="srsum"><b>' + n + (n === 1 ? ' deal' : ' deals') + '</b> on this page match ' + word + '.</p>'
       : (m.length ? '<p class="srsum">Nothing current matches ' + word + ', but these older deals do (prices may have changed):</p>'
                   : '<p class="srsum">No deals match ' + word + ' right now. Try a shorter word or a brand name.</p>');
-    if (/winter|snow|cold|heat/.test(q)) h += '<p class="srsum"><a href="/winter/">See all winter-ready deals on one page &rarr;</a></p>';
+    if (/winter|snow|cold|heat/.test(q)) h += fr() ? '<p class="srsum"><a href="/winter/">Voir toutes les aubaines pour l’hiver sur une page &rarr;</a></p>' : '<p class="srsum"><a href="/winter/">See all winter-ready deals on one page &rarr;</a></p>';
     if (m.length) {
-      h += '<p class="srh">Older deals</p>' + m.map(function(it){
+      h += '<p class="srh">' + (fr() ? 'Anciennes aubaines' : 'Older deals') + '</p>' + m.map(function(it){
         return '<a class="srrow" href="/deals/' + encodeURIComponent(it.s) + '/"><span>' + esc(it.t) + '</span>' +
                (it.p ? '<b>&minus;' + it.p + '%</b>' : '') + '</a>';
       }).join('');
@@ -2112,10 +2196,23 @@ footer b{color:var(--ink); font-weight:600}
   }
   chips.forEach(function(c){ c.addEventListener('click', function(){ setFilter(c.getAttribute('data-f')); }); });
   sortSel.addEventListener('change', function(){ st.sort = sortSel.value; st.limit = PAGE; render(); });
-  input.addEventListener('input', function(){ st.q = input.value.trim().toLowerCase(); st.limit = PAGE; render(); });
+  // French search words -> the English words used in product names (12 Oct 2026)
+  var FRW = {'bottes':'boots','botte':'boot','écouteurs':'earbuds','ecouteurs':'earbuds','casque':'headphones',
+    'aspirateur':'vacuum','aspirateurs':'vacuum','oreiller':'pillow','oreillers':'pillows','montre':'watch',
+    'chaise':'chair','jouet':'toy','jouets':'toy','jeu':'game','jeux':'game','lumières':'lights','lumieres':'lights',
+    'chauffe-mains':'hand warmer','batterie':'battery','piles':'batteries','chargeur':'charger','souris':'mouse',
+    'clavier':'keyboard','caméra':'camera','camera':'camera','couverture':'blanket','tasse':'mug','bouteille':'bottle',
+    'mélangeur':'blender','melangeur':'blender','cuisine':'kitchen','chien':'dog','chat':'cat','bébé':'baby','bebe':'baby',
+    'enfants':'kids','enfant':'kids','hiver':'winter','neige':'snow','manteau':'jacket','gants':'gloves','tuque':'toque',
+    'brosse':'brush','crème':'cream','creme':'cream','maquillage':'makeup','cheveux':'hair','dentifrice':'toothpaste',
+    'brosse à dents':'toothbrush','détergent':'detergent','lingettes':'wipes','sacs':'bags','calculatrice':'calculator',
+    'stylos':'pens','crayons':'pencils','cartes':'cards','casse-tête':'puzzle','peinture':'paint','lunettes':'glasses'};
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    st.q = FRW[q] || q; st.limit = PAGE; render();
+  });
   moreBtn.addEventListener('click', function(){
     var first = st.limit; st.limit += PAGE; render();
-    var vis = cards.filter(function(li){ return !li.hidden; });
     var next = grid.querySelectorAll('li.card:not([hidden])')[first];
     if (next) { var a = next.querySelector('.tlink'); if (a) a.focus({preventScroll:true}); }
   });
@@ -2130,17 +2227,29 @@ footer b{color:var(--ink); font-weight:600}
   // Old links kept working: #vac, #u20, #hot, #coupons pick the matching filter.
   var hmap = {'#vac':['vac','new'], '#u20':['u20','new'], '#hot':['all','pct'], '#coupons':['code','new']};
   var h = hmap[location.hash];
-  if (h) { st.sort = h[1]; sortSel.value = h[1]; setFilter(h[0]);
-           document.getElementById('deals').scrollIntoView(); }
-  else render();
+  if (h) { st.sort = h[1]; sortSel.value = h[1]; st.f = h[0];
+           chips.forEach(function(c){ c.setAttribute('aria-pressed', c.getAttribute('data-f') === h[0] ? 'true' : 'false'); }); }
+  var startLang = 'en';
+  try {
+    var qp = (location.search.match(/[?&]lang=(fr|en)/) || [])[1];
+    var saved = localStorage.getItem('fblLang');
+    startLang = qp || saved || ((navigator.language || '').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en');
+  } catch (e) {
+    startLang = (navigator.language || '').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
+  }
+  if (startLang === 'fr') applyLang('fr'); else render();
+  if (h) document.getElementById('deals').scrollIntoView();
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ applyLang(b.getAttribute('data-lang')); });
+  });
 
   // Copy a promo code
   grid.addEventListener('click', function(ev){
     var b = ev.target.closest && ev.target.closest('.copy');
     if (!b) return;
     var code = b.getAttribute('data-code');
-    function done(){ b.textContent = 'Copied!'; b.classList.add('ok');
-      setTimeout(function(){ b.textContent = 'Copy'; b.classList.remove('ok'); }, 1800); }
+    function done(){ b.textContent = fr() ? FR.copied : 'Copied!'; b.classList.add('ok');
+      setTimeout(function(){ b.textContent = fr() ? FR.copy : 'Copy'; b.classList.remove('ok'); }, 1800); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, done);
     else { var t = document.createElement('textarea'); t.value = code; document.body.appendChild(t); t.select();
            try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
