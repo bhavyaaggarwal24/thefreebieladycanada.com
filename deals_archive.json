@@ -303,14 +303,14 @@
   },
   "B0007LTNXC": {
     "asin": "B0007LTNXC",
-    "title_short": "Sticky Notes, 12 Pads",
+    "title_short": "Highland Sticky Notes 12-Pack",
     "was": 13.99,
     "now": 7.49,
     "pct": 46,
     "link": "https://www.amazon.ca/dp/B0007LTNXC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-25",
+    "last_seen": "2026-10-13",
     "slug": "b0007ltnxc-sticky-notes-12-pads"
   },
   "B0DZ32CJYW": {
@@ -1684,14 +1684,14 @@
   },
   "B0BZXNSW5K": {
     "asin": "B0BZXNSW5K",
-    "title_short": "Touch Lamp + USB Ports",
+    "title_short": "Fenmzee Touch Bedside Lamp",
     "was": 39.99,
-    "now": 29.99,
-    "pct": 25,
+    "now": 23.99,
+    "pct": 40,
     "link": "https://www.amazon.ca/dp/B0BZXNSW5K?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-23",
+    "last_seen": "2026-10-13",
     "slug": "b0bzxnsw5k-touch-lamp-usb-ports"
   },
   "B001MW31XS": {
@@ -3004,7 +3004,7 @@
     "link": "https://www.amazon.ca/dp/B00DURIQOC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-27",
-    "last_seen": "2026-09-27",
+    "last_seen": "2026-10-13",
     "slug": "b00duriqoc-hill-s-soft-baked-dog-treats"
   },
   "B0DRW7D2P7": {
@@ -3753,7 +3753,7 @@
     "link": "https://www.amazon.ca/dp/B0C34RZ84M?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-04",
-    "last_seen": "2026-10-05",
+    "last_seen": "2026-10-13",
     "slug": "b0c34rz84m-play-doh-hair-stylin-salon"
   },
   "B0GBZJLLCD": {
@@ -6089,5 +6089,77 @@
     "first_seen": "2026-10-12",
     "last_seen": "2026-10-12",
     "slug": "b0hf823h9x-magic-puffy-paint-kit-for-kids"
+  },
+  "B0035H7LXO": {
+    "asin": "B0035H7LXO",
+    "title_short": "Catit Cat Harness & Leash Set",
+    "was": 22.99,
+    "now": 14.71,
+    "pct": 36,
+    "link": "https://www.amazon.ca/dp/B0035H7LXO?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0035h7lxo-catit-cat-harness-leash-set"
+  },
+  "B0B1NWLSNR": {
+    "asin": "B0B1NWLSNR",
+    "title_short": "Jocauto Folding Step Stool",
+    "was": 49.98,
+    "now": 33.99,
+    "pct": 32,
+    "link": "https://www.amazon.ca/dp/B0B1NWLSNR?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0b1nwlsnr-jocauto-folding-step-stool"
+  },
+  "B0G4SKRJG7": {
+    "asin": "B0G4SKRJG7",
+    "title_short": "Sony LinkBuds Clip Earbuds",
+    "was": 298,
+    "now": 197.98,
+    "pct": 34,
+    "link": "https://www.amazon.ca/dp/B0G4SKRJG7?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0g4skrjg7-sony-linkbuds-clip-earbuds"
+  },
+  "B0C7BKZ883": {
+    "asin": "B0C7BKZ883",
+    "title_short": "Gogoonike Laptop Stand",
+    "was": 29.99,
+    "now": 20.71,
+    "pct": 31,
+    "link": "https://www.amazon.ca/dp/B0C7BKZ883?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0c7bkz883-gogoonike-laptop-stand"
+  },
+  "B07Z8KQS99": {
+    "asin": "B07Z8KQS99",
+    "title_short": "Zebra Mildliner 10-Pack",
+    "was": 16.49,
+    "now": 11.49,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B07Z8KQS99?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b07z8kqs99-zebra-mildliner-10-pack"
+  },
+  "B09X395CNV": {
+    "asin": "B09X395CNV",
+    "title_short": "HOOBRO End Table w/ Charging",
+    "was": 55.99,
+    "now": 37.99,
+    "pct": 32,
+    "link": "https://www.amazon.ca/dp/B09X395CNV?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b09x395cnv-hoobro-end-table-w-charging"
   }
 }
