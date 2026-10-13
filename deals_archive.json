@@ -4989,12 +4989,12 @@
     "asin": "B0C2GT613F",
     "title_short": "GoveeLife Smart 3L Humidifier",
     "was": 89.99,
-    "now": 44.99,
-    "pct": 50,
+    "now": 42.99,
+    "pct": 52,
     "link": "https://www.amazon.ca/dp/B0C2GT613F?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-13",
     "slug": "b0c2gt613f-goveelife-smart-3l-humidifier"
   },
   "B0DK5XXVTX": {
@@ -6161,5 +6161,77 @@
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-13",
     "slug": "b09x395cnv-hoobro-end-table-w-charging"
+  },
+  "B07GJYKL9Y": {
+    "asin": "B07GJYKL9Y",
+    "title_short": "3 Hanging Ghosts, 27.5\"",
+    "was": 29.99,
+    "now": 19.99,
+    "pct": 33,
+    "link": "https://www.amazon.ca/dp/B07GJYKL9Y?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b07gjykl9y-3-hanging-ghosts-27-5"
+  },
+  "B0GZVXC12W": {
+    "asin": "B0GZVXC12W",
+    "title_short": "50ft Purple & Orange Halloween Lights",
+    "was": 45.99,
+    "now": 29.99,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B0GZVXC12W?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0gzvxc12w-50ft-purple-orange-halloween-lights"
+  },
+  "B09KXV2BC4": {
+    "asin": "B09KXV2BC4",
+    "title_short": "ULTRAIDEAS Memory Foam Slippers",
+    "was": 45.99,
+    "now": 26.98,
+    "pct": 41,
+    "link": "https://www.amazon.ca/dp/B09KXV2BC4?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b09kxv2bc4-ultraideas-memory-foam-slippers"
+  },
+  "B07H3CRDLX": {
+    "asin": "B07H3CRDLX",
+    "title_short": "Girls' Royal Vampire Costume",
+    "was": 49.99,
+    "now": 34.99,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B07H3CRDLX?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b07h3crdlx-girls-royal-vampire-costume"
+  },
+  "B0BPLB81LX": {
+    "asin": "B0BPLB81LX",
+    "title_short": "Bedsure Soft Throw Blanket",
+    "was": 31.99,
+    "now": 20.89,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B0BPLB81LX?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b0bplb81lx-bedsure-soft-throw-blanket"
+  },
+  "B01NAOKEVG": {
+    "asin": "B01NAOKEVG",
+    "title_short": "Kamik Waterbug 5 Kids' Boots",
+    "was": 79.99,
+    "now": 55.23,
+    "pct": 31,
+    "link": "https://www.amazon.ca/dp/B01NAOKEVG?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "slug": "b01naokevg-kamik-waterbug-5-kids-boots"
   }
 }
