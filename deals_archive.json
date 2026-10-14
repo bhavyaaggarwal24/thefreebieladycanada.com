@@ -5061,14 +5061,14 @@
   },
   "B06XT4QMHB": {
     "asin": "B06XT4QMHB",
-    "title_short": "Cascade Complete Pods, 90 Count",
+    "title_short": "Cascade Complete Dishwasher Pods, 90 ct",
     "was": 27.99,
-    "now": 22.47,
-    "pct": 20,
+    "now": 20.6,
+    "pct": 26,
     "link": "https://www.amazon.ca/dp/B06XT4QMHB?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-14",
     "slug": "b06xt4qmhb-cascade-complete-pods-90-count"
   },
   "B07NC3732S": {
@@ -6292,5 +6292,77 @@
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-13",
     "slug": "b0cz6j4lg5-electric-heating-pad"
+  },
+  "B0BJ13XWDD": {
+    "asin": "B0BJ13XWDD",
+    "title_short": "Pampers Aqua Pure Wipes, 672 ct",
+    "was": 32.99,
+    "now": 18.97,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B0BJ13XWDD?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b0bj13xwdd-pampers-aqua-pure-wipes-672-ct"
+  },
+  "B071FG5F9S": {
+    "asin": "B071FG5F9S",
+    "title_short": "Bedsure Satin Pillowcases, 2-Pack",
+    "was": 22.99,
+    "now": 14.98,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B071FG5F9S?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b071fg5f9s-bedsure-satin-pillowcases-2-pack"
+  },
+  "B09K3FDCN9": {
+    "asin": "B09K3FDCN9",
+    "title_short": "Cat Fountain Filters, 16-Pack",
+    "was": 19.99,
+    "now": 14.23,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B09K3FDCN9?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b09k3fdcn9-cat-fountain-filters-16-pack"
+  },
+  "B00EMAM9BC": {
+    "asin": "B00EMAM9BC",
+    "title_short": "CoverGirl Lash Blast Volume Mascara",
+    "was": 12.99,
+    "now": 8.49,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B00EMAM9BC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b00emam9bc-covergirl-lash-blast-volume-mascara"
+  },
+  "B0BS2D2KN7": {
+    "asin": "B0BS2D2KN7",
+    "title_short": "Kitsch Shampoo + Conditioner Bars",
+    "was": 38.98,
+    "now": 29.23,
+    "pct": 25,
+    "link": "https://www.amazon.ca/dp/B0BS2D2KN7?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b0bs2d2kn7-kitsch-shampoo-conditioner-bars"
+  },
+  "B081JTZNRS": {
+    "asin": "B081JTZNRS",
+    "title_short": "Glass Meal Prep Containers, 10-Pack",
+    "was": 59.99,
+    "now": 44.99,
+    "pct": 25,
+    "link": "https://www.amazon.ca/dp/B081JTZNRS?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "slug": "b081jtznrs-glass-meal-prep-containers-10-pack"
   }
 }
