@@ -1013,14 +1013,14 @@
   },
   "B07MQ8YRF3": {
     "asin": "B07MQ8YRF3",
-    "title_short": "16 Rechargeable AAs",
+    "title_short": "POWEROWL Rechargeable AAs, 16-Pack",
     "was": 49.99,
-    "now": 31.99,
-    "pct": 36,
+    "now": 27.19,
+    "pct": 46,
     "link": "https://www.amazon.ca/dp/B07MQ8YRF3?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-23",
+    "last_seen": "2026-10-15",
     "slug": "b07mq8yrf3-16-rechargeable-aas"
   },
   "B09YHBRHC4": {
@@ -6520,5 +6520,77 @@
     "first_seen": "2026-10-15",
     "last_seen": "2026-10-15",
     "slug": "b0c5d8txzw-octopus-tentacle-inflatables-3-pcs"
+  },
+  "B0DSG7B2G1": {
+    "asin": "B0DSG7B2G1",
+    "title_short": "Gillette Venus Razor + 3 Refills",
+    "was": 22.49,
+    "now": 15.99,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B0DSG7B2G1?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b0dsg7b2g1-gillette-venus-razor-3-refills"
+  },
+  "B07VXRXMQY": {
+    "asin": "B07VXRXMQY",
+    "title_short": "Hoover Oxy Carpet Cleaner Solution, 50 oz",
+    "was": 25.99,
+    "now": 17.99,
+    "pct": 31,
+    "link": "https://www.amazon.ca/dp/B07VXRXMQY?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b07vxrxmqy-hoover-oxy-carpet-cleaner-solution-50-oz"
+  },
+  "B0C7LRR4W4": {
+    "asin": "B0C7LRR4W4",
+    "title_short": "Litter Genie XL+ Pail + 24 ft Refill",
+    "was": 51.95,
+    "now": 35.99,
+    "pct": 31,
+    "link": "https://www.amazon.ca/dp/B0C7LRR4W4?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b0c7lrr4w4-litter-genie-xl-pail-24-ft-refill"
+  },
+  "B07H1787LD": {
+    "asin": "B07H1787LD",
+    "title_short": "Sonicare DiamondClean Brush Heads, 2-Pack",
+    "was": 42.99,
+    "now": 32.95,
+    "pct": 23,
+    "link": "https://www.amazon.ca/dp/B07H1787LD?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b07h1787ld-sonicare-diamondclean-brush-heads-2-pack"
+  },
+  "B0CLTSD3X4": {
+    "asin": "B0CLTSD3X4",
+    "title_short": "FIXSMITH Microfiber Cleaning Cloths, 12-Pack",
+    "was": 12.99,
+    "now": 9.39,
+    "pct": 28,
+    "link": "https://www.amazon.ca/dp/B0CLTSD3X4?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b0cltsd3x4-fixsmith-microfiber-cleaning-cloths-12-pack"
+  },
+  "B0CQJF2PZ6": {
+    "asin": "B0CQJF2PZ6",
+    "title_short": "Dr. Zitacne Star Pimple Patches, 255 ct",
+    "was": 13.99,
+    "now": 9.99,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B0CQJF2PZ6?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "slug": "b0cqjf2pz6-dr-zitacne-star-pimple-patches-255-ct"
   }
 }
