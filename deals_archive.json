@@ -6278,7 +6278,7 @@
     "link": "https://www.amazon.ca/dp/B0C4F4YRZV?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-13",
+    "last_seen": "2026-10-17",
     "slug": "b0c4f4yrzv-merino-wool-socks-5-pairs"
   },
   "B0CZ6J4LG5": {
@@ -6374,7 +6374,7 @@
     "link": "https://www.amazon.ca/dp/B0C4GZMKXZ?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
+    "last_seen": "2026-10-17",
     "slug": "b0c4gzmkxz-astroai-portable-tire-inflator"
   },
   "B0BB3TPQ91": {
@@ -6784,5 +6784,65 @@
     "first_seen": "2026-10-16",
     "last_seen": "2026-10-16",
     "slug": "b0cl4qsgw7-rdruko-men-s-packable-down-puffer-jacket"
+  },
+  "B0GQRTNC21": {
+    "asin": "B0GQRTNC21",
+    "title_short": "Amos Gummy Eyeball Treats, about 40 Pieces",
+    "was": 17.99,
+    "now": 9.98,
+    "pct": 45,
+    "link": "https://www.amazon.ca/dp/B0GQRTNC21?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "slug": "b0gqrtnc21-amos-gummy-eyeball-treats-about-40-pieces"
+  },
+  "B0C3BC4QG2": {
+    "asin": "B0C3BC4QG2",
+    "title_short": "Gritin Rechargeable LED Book Light",
+    "was": 25.99,
+    "now": 14.98,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B0C3BC4QG2?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "slug": "b0c3bc4qg2-gritin-rechargeable-led-book-light"
+  },
+  "B0BQPNMXQV": {
+    "asin": "B0BQPNMXQV",
+    "title_short": "JBL Vibe Beam True Wireless Earbuds",
+    "was": 99.98,
+    "now": 44.98,
+    "pct": 55,
+    "link": "https://www.amazon.ca/dp/B0BQPNMXQV?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "slug": "b0bqpnmxqv-jbl-vibe-beam-true-wireless-earbuds"
+  },
+  "B078YZ586K": {
+    "asin": "B078YZ586K",
+    "title_short": "Hoover PowerDash Pet Compact Carpet Cleaner",
+    "was": 169.99,
+    "now": 99.99,
+    "pct": 41,
+    "link": "https://www.amazon.ca/dp/B078YZ586K?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "slug": "b078yz586k-hoover-powerdash-pet-compact-carpet-cleaner"
+  },
+  "B01BSPP5NM": {
+    "asin": "B01BSPP5NM",
+    "title_short": "Wet Ones Sensitive Skin Hand Wipes, 10 Pack",
+    "was": 42.7,
+    "now": 24.29,
+    "pct": 43,
+    "link": "https://www.amazon.ca/dp/B01BSPP5NM?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "slug": "b01bspp5nm-wet-ones-sensitive-skin-hand-wipes-10-pack"
   }
 }
