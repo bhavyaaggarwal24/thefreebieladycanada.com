@@ -5063,12 +5063,12 @@
     "asin": "B06XT4QMHB",
     "title_short": "Cascade Complete Dishwasher Pods, 90 ct",
     "was": 27.99,
-    "now": 20.6,
-    "pct": 26,
+    "now": 20.22,
+    "pct": 28,
     "link": "https://www.amazon.ca/dp/B06XT4QMHB?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-14",
+    "last_seen": "2026-10-21",
     "slug": "b06xt4qmhb-cascade-complete-pods-90-count"
   },
   "B07NC3732S": {
@@ -5163,16 +5163,15 @@
   },
   "B0C8XBKZYG": {
     "asin": "B0C8XBKZYG",
-    "title_short": "Downy Liquid Fabric Softener",
+    "title_short": "Downy 2-in-1 Liquid Fabric Softener, 190 Loads",
     "was": 17.99,
-    "now": 14.39,
-    "pct": 20,
+    "now": 14.24,
+    "pct": 21,
     "link": "https://www.amazon.ca/dp/B0C8XBKZYG?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "Prime member price \u2014 sign in with Prime to see it",
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-07",
-    "slug": "b0c8xbkzyg-downy-liquid-fabric-softener",
-    "ended": "2026-10-09"
+    "last_seen": "2026-10-21",
+    "slug": "b0c8xbkzyg-downy-liquid-fabric-softener"
   },
   "B0CFXQWZ4N": {
     "asin": "B0CFXQWZ4N",
@@ -6302,7 +6301,7 @@
     "link": "https://www.amazon.ca/dp/B0BJ13XWDD?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
+    "last_seen": "2026-10-21",
     "slug": "b0bj13xwdd-pampers-aqua-pure-wipes-672-ct"
   },
   "B071FG5F9S": {
@@ -7036,5 +7035,41 @@
     "first_seen": "2026-10-21",
     "last_seen": "2026-10-21",
     "slug": "b098gb12cx-joyin-67-animated-skeleton-ghost-sound-activated"
+  },
+  "B0BSJSFY1M": {
+    "asin": "B0BSJSFY1M",
+    "title_short": "Tide Pods Free & Gentle, 76 Count",
+    "was": 24.99,
+    "now": 19.95,
+    "pct": 20,
+    "link": "https://www.amazon.ca/dp/B0BSJSFY1M?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "slug": "b0bsjsfy1m-tide-pods-free-gentle-76-count"
+  },
+  "B00NAU1KH4": {
+    "asin": "B00NAU1KH4",
+    "title_short": "Yupik Gummy Cola Bottles, 1 kg",
+    "was": 16.72,
+    "now": 10.61,
+    "pct": 37,
+    "link": "https://www.amazon.ca/dp/B00NAU1KH4?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "slug": "b00nau1kh4-yupik-gummy-cola-bottles-1-kg"
+  },
+  "B00E3862DE": {
+    "asin": "B00E3862DE",
+    "title_short": "Philips Fabric Shaver, Removes Pills and Lint",
+    "was": 22.99,
+    "now": 16.99,
+    "pct": 26,
+    "link": "https://www.amazon.ca/dp/B00E3862DE?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "slug": "b00e3862de-philips-fabric-shaver-removes-pills-and-lint"
   }
 }
