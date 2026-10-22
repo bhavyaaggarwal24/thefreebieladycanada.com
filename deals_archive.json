@@ -1647,14 +1647,14 @@
   },
   "B0CTWHSSM8": {
     "asin": "B0CTWHSSM8",
-    "title_short": "QUNREDA 360\u00b0 Stunt RC Car",
+    "title_short": "QUNREDA Remote Control Car for Kids",
     "was": 59.99,
-    "now": 41.99,
-    "pct": 30,
+    "now": 33.57,
+    "pct": 44,
     "link": "https://www.amazon.ca/dp/B0CTWHSSM8?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-12",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-22",
     "slug": "b0ctwhssm8-qunreda-rc-stunt-car"
   },
   "B0DBLBSSYH": {
@@ -1910,16 +1910,15 @@
   },
   "B0F3BJMLKJ": {
     "asin": "B0F3BJMLKJ",
-    "title_short": "Blink Mini 2K+ Indoor Camera",
+    "title_short": "Blink Mini 2K+ Indoor Security Camera",
     "was": 59.99,
-    "now": 23.99,
-    "pct": 60,
+    "now": 25.99,
+    "pct": 57,
     "link": "https://www.amazon.ca/dp/B0F3BJMLKJ?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-23",
-    "last_seen": "2026-10-05",
-    "slug": "b0f3bjmlkj-blink-mini-2k-camera",
-    "ended": "2026-10-09"
+    "last_seen": "2026-10-22",
+    "slug": "b0f3bjmlkj-blink-mini-2k-camera"
   },
   "B0GS6STVCN": {
     "asin": "B0GS6STVCN",
@@ -2592,16 +2591,15 @@
   },
   "B0G62TFG7S": {
     "asin": "B0G62TFG7S",
-    "title_short": "Blink Wired Doorbell 2K+",
+    "title_short": "Blink Wired Video Doorbell 2K+",
     "was": 69.99,
-    "now": 35.0,
-    "pct": 50,
+    "now": 33.99,
+    "pct": 51,
     "link": "https://www.amazon.ca/dp/B0G62TFG7S?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-24",
-    "last_seen": "2026-10-08",
-    "slug": "b0g62tfg7s-blink-wired-doorbell-2k",
-    "ended": "2026-10-09"
+    "last_seen": "2026-10-22",
+    "slug": "b0g62tfg7s-blink-wired-doorbell-2k"
   },
   "B0G62C4S5S": {
     "asin": "B0G62C4S5S",
@@ -7071,5 +7069,53 @@
     "first_seen": "2026-10-21",
     "last_seen": "2026-10-21",
     "slug": "b00e3862de-philips-fabric-shaver-removes-pills-and-lint"
+  },
+  "B0FQC225RV": {
+    "asin": "B0FQC225RV",
+    "title_short": "QKMPOM 180PSI Portable Tire Inflator",
+    "was": 99.99,
+    "now": 49.98,
+    "pct": 50,
+    "link": "https://www.amazon.ca/dp/B0FQC225RV?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "slug": "b0fqc225rv-qkmpom-180psi-portable-tire-inflator"
+  },
+  "B0D9246GV7": {
+    "asin": "B0D9246GV7",
+    "title_short": "OEAGO Wool Winter Socks, 5 Pairs",
+    "was": 20.99,
+    "now": 13.64,
+    "pct": 35,
+    "link": "https://www.amazon.ca/dp/B0D9246GV7?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "35% comes off at checkout on the Amazon.ca page (price before the discount $20.99). Promos can end anytime.",
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "slug": "b0d9246gv7-oeago-wool-winter-socks-5-pairs"
+  },
+  "B0CT9XTKKM": {
+    "asin": "B0CT9XTKKM",
+    "title_short": "JBL Tune 770NC Noise Cancelling Wireless Headphones",
+    "was": 189.98,
+    "now": 79.88,
+    "pct": 58,
+    "link": "https://www.amazon.ca/dp/B0CT9XTKKM?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "slug": "b0ct9xtkkm-jbl-tune-770nc-noise-cancelling-wireless-headphones"
+  },
+  "B0007ZF4OA": {
+    "asin": "B0007ZF4OA",
+    "title_short": "HotHands Hand Warmers, 40 Pairs",
+    "was": 80.54,
+    "now": 39.25,
+    "pct": 51,
+    "link": "https://www.amazon.ca/dp/B0007ZF4OA?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "slug": "b0007zf4oa-hothands-hand-warmers-40-pairs"
   }
 }
