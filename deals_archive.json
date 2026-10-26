@@ -89,14 +89,14 @@
   },
   "B0BCW4YMR8": {
     "asin": "B0BCW4YMR8",
-    "title_short": "NIIMBOT B1 Label Maker",
+    "title_short": "NIIMBOT B1 Label Maker with Tape",
     "was": 59.99,
-    "now": 29.99,
+    "now": 29.98,
     "pct": 50,
     "link": "https://www.amazon.ca/dp/B0BCW4YMR8?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-13",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-26",
     "slug": "b0bcw4ymr8-niimbot-b1-label-maker"
   },
   "B0017P0LLA": {
@@ -6376,14 +6376,14 @@
   },
   "B0BB3TPQ91": {
     "asin": "B0BB3TPQ91",
-    "title_short": "Homvana 3.6L Humidifier",
+    "title_short": "Homvana 3.6L Humidifier + Oil Diffuser",
     "was": 59.98,
     "now": 44.98,
     "pct": 25,
     "link": "https://www.amazon.ca/dp/B0BB3TPQ91?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
+    "last_seen": "2026-10-26",
     "slug": "b0bb3tpq91-homvana-3-6l-humidifier"
   },
   "B0G1FH6CG2": {
@@ -7117,5 +7117,53 @@
     "first_seen": "2026-10-22",
     "last_seen": "2026-10-22",
     "slug": "b0007zf4oa-hothands-hand-warmers-40-pairs"
+  },
+  "B0BTYCRJSS": {
+    "asin": "B0BTYCRJSS",
+    "title_short": "Anker Soundcore P20i Wireless Earbuds",
+    "was": 39.99,
+    "now": 29.99,
+    "pct": 25,
+    "link": "https://www.amazon.ca/dp/B0BTYCRJSS?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "slug": "b0btycrjss-anker-soundcore-p20i-wireless-earbuds"
+  },
+  "B09P51V2LH": {
+    "asin": "B09P51V2LH",
+    "title_short": "Leebein Electric Spin Scrubber, Cordless, 8 Brush Heads",
+    "was": 79.99,
+    "now": 45.59,
+    "pct": 43,
+    "link": "https://www.amazon.ca/dp/B09P51V2LH?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "slug": "b09p51v2lh-leebein-electric-spin-scrubber-cordless-8-brush-heads"
+  },
+  "B01M16WBW1": {
+    "asin": "B01M16WBW1",
+    "title_short": "Queen 4-Piece Sheet Set, White",
+    "was": 39.99,
+    "now": 25.49,
+    "pct": 36,
+    "link": "https://www.amazon.ca/dp/B01M16WBW1?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "slug": "b01m16wbw1-queen-4-piece-sheet-set-white"
+  },
+  "B0113UZJE2": {
+    "asin": "B0113UZJE2",
+    "title_short": "Etekcity Digital Food Kitchen Scale, 11 lb",
+    "was": 21.99,
+    "now": 15.99,
+    "pct": 27,
+    "link": "https://www.amazon.ca/dp/B0113UZJE2?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "slug": "b0113uzje2-etekcity-digital-food-kitchen-scale-11-lb"
   }
 }
