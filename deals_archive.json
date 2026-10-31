@@ -5413,26 +5413,26 @@
   },
   "B0CTBCDD6D": {
     "asin": "B0CTBCDD6D",
-    "title_short": "JBL Tune 720BT Headphones",
+    "title_short": "JBL Tune 720BT Wireless Over-Ear Headphones",
     "was": 109.98,
     "now": 59.98,
     "pct": 45,
     "link": "https://www.amazon.ca/dp/B0CTBCDD6D?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-31",
     "slug": "b0ctbcdd6d-jbl-tune-720bt-headphones"
   },
   "B0CTNWBT1Z": {
     "asin": "B0CTNWBT1Z",
-    "title_short": "JBL Go 4 Speaker",
+    "title_short": "JBL Go 4 Portable Bluetooth Speaker, Black",
     "was": 69.98,
     "now": 39.98,
     "pct": 43,
     "link": "https://www.amazon.ca/dp/B0CTNWBT1Z?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-31",
     "slug": "b0ctnwbt1z-jbl-go-4-speaker"
   },
   "B0C296VD7T": {
@@ -6244,14 +6244,14 @@
   },
   "B09QZNMVFC": {
     "asin": "B09QZNMVFC",
-    "title_short": "Northern Lights Star Projector",
+    "title_short": "CIMELR Northern Lights Aurora Star Projector with Bluetooth Speaker",
     "was": 59.99,
     "now": 39.98,
     "pct": 33,
     "link": "https://www.amazon.ca/dp/B09QZNMVFC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-13",
+    "last_seen": "2026-10-31",
     "slug": "b09qznmvfc-northern-lights-star-projector"
   },
   "B0CWVX1GNX": {
@@ -7381,5 +7381,41 @@
     "first_seen": "2026-10-28",
     "last_seen": "2026-10-28",
     "slug": "b006csqxlo-duracell-coppertop-aaa-batteries-16-count"
+  },
+  "B0BXM37848": {
+    "asin": "B0BXM37848",
+    "title_short": "Amazon Fire TV Stick 4K Max (newest model)",
+    "was": 129.99,
+    "now": 64.99,
+    "pct": 50,
+    "link": "https://www.amazon.ca/dp/B0BXM37848?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-31",
+    "last_seen": "2026-10-31",
+    "slug": "b0bxm37848-amazon-fire-tv-stick-4k-max-newest-model"
+  },
+  "B09712FSLY": {
+    "asin": "B09712FSLY",
+    "title_short": "WAOAW 3D Blackout Sleep Mask",
+    "was": 29.99,
+    "now": 12.3,
+    "pct": 59,
+    "link": "https://www.amazon.ca/dp/B09712FSLY?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-31",
+    "last_seen": "2026-10-31",
+    "slug": "b09712fsly-waoaw-3d-blackout-sleep-mask"
+  },
+  "B00KWRM5Z4": {
+    "asin": "B00KWRM5Z4",
+    "title_short": "DEWALT 20V MAX XR 5.0Ah Battery (DCB205)",
+    "was": 219,
+    "now": 117.49,
+    "pct": 46,
+    "link": "https://www.amazon.ca/dp/B00KWRM5Z4?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-10-31",
+    "last_seen": "2026-10-31",
+    "slug": "b00kwrm5z4-dewalt-20v-max-xr-5-0ah-battery-dcb205"
   }
 }
