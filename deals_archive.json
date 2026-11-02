@@ -5474,16 +5474,15 @@
   },
   "B0BS1PRC4L": {
     "asin": "B0BS1PRC4L",
-    "title_short": "Sony WH-CH520 Headphones",
-    "was": 98,
+    "title_short": "Sony WH-CH520 Wireless On-Ear Headphones, Black",
+    "was": 99.99,
     "now": 48,
-    "pct": 51,
+    "pct": 52,
     "link": "https://www.amazon.ca/dp/B0BS1PRC4L?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
-    "slug": "b0bs1prc4l-sony-wh-ch520-headphones",
-    "ended": "2026-10-09"
+    "last_seen": "2026-11-02",
+    "slug": "b0bs1prc4l-sony-wh-ch520-headphones"
   },
   "B08Z79Z2N9": {
     "asin": "B08Z79Z2N9",
@@ -7489,5 +7488,65 @@
     "first_seen": "2026-11-02",
     "last_seen": "2026-11-02",
     "slug": "b00006andk-oral-b-sensitive-gum-care-replacement-brush-heads-3-count"
+  },
+  "B0F7Z43QKK": {
+    "asin": "B0F7Z43QKK",
+    "title_short": "Amazon Fire TV Stick 4K Plus",
+    "was": 99.99,
+    "now": 49.99,
+    "pct": 50,
+    "link": "https://www.amazon.ca/dp/B0F7Z43QKK?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b0f7z43qkk-amazon-fire-tv-stick-4k-plus"
+  },
+  "B09G3H12TC": {
+    "asin": "B09G3H12TC",
+    "title_short": "Kitsch Pillow Satin Scrunchies, Blush/Charcoal, 2 pcs",
+    "was": 21.99,
+    "now": 12.79,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B09G3H12TC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b09g3h12tc-kitsch-pillow-satin-scrunchies-blush-charcoal-2-pcs"
+  },
+  "B088DGBRMC": {
+    "asin": "B088DGBRMC",
+    "title_short": "AOTHOD Silicone Cooking Utensils Set, Heat Resistant",
+    "was": 45.99,
+    "now": 25.49,
+    "pct": 45,
+    "link": "https://www.amazon.ca/dp/B088DGBRMC?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b088dgbrmc-aothod-silicone-cooking-utensils-set-heat-resistant"
+  },
+  "B085SC16LF": {
+    "asin": "B085SC16LF",
+    "title_short": "Nespresso Vertuo Next Coffee + Espresso Machine, Light Grey",
+    "was": 229,
+    "now": 114,
+    "pct": 50,
+    "link": "https://www.amazon.ca/dp/B085SC16LF?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b085sc16lf-nespresso-vertuo-next-coffee-espresso-machine-light-grey"
+  },
+  "B07RTVS275": {
+    "asin": "B07RTVS275",
+    "title_short": "Bedsure White Duvet Cover Queen, 3 Pcs",
+    "was": 42.99,
+    "now": 27.19,
+    "pct": 37,
+    "link": "https://www.amazon.ca/dp/B07RTVS275?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b07rtvs275-bedsure-white-duvet-cover-queen-3-pcs"
   }
 }
