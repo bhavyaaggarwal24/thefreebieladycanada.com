@@ -2894,14 +2894,14 @@
   },
   "B0D93D6PPK": {
     "asin": "B0D93D6PPK",
-    "title_short": "YADIFEN Wool Socks, 5 Pairs",
+    "title_short": "YADIFEN Men's Merino Wool Socks, 5 Pairs",
     "was": 29.99,
-    "now": 19.99,
-    "pct": 33,
+    "now": 17.99,
+    "pct": 40,
     "link": "https://www.amazon.ca/dp/B0D93D6PPK?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
-    "coupon_note": "",
+    "coupon_note": "Price can vary by size and colour.",
     "first_seen": "2026-09-26",
-    "last_seen": "2026-09-26",
+    "last_seen": "2026-11-02",
     "slug": "b0d93d6ppk-yadifen-wool-socks-5-pairs"
   },
   "B0FKH5PQ8T": {
@@ -7548,5 +7548,65 @@
     "first_seen": "2026-11-02",
     "last_seen": "2026-11-02",
     "slug": "b07rtvs275-bedsure-white-duvet-cover-queen-3-pcs"
+  },
+  "B0F597M88C": {
+    "asin": "B0F597M88C",
+    "title_short": "PRETTYGARDEN Women's Bell Long Sleeve Ribbed Knit Top",
+    "was": 29.99,
+    "now": 19.98,
+    "pct": 33,
+    "link": "https://www.amazon.ca/dp/B0F597M88C?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Price can vary by size and colour.",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b0f597m88c-prettygarden-women-s-bell-long-sleeve-ribbed-knit-top"
+  },
+  "B0D9V93H65": {
+    "asin": "B0D9V93H65",
+    "title_short": "PRETTYGARDEN Women's Open Front Oversized Cardigan",
+    "was": 69.99,
+    "now": 52.99,
+    "pct": 24,
+    "link": "https://www.amazon.ca/dp/B0D9V93H65?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Price can vary by size and colour.",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b0d9v93h65-prettygarden-women-s-open-front-oversized-cardigan"
+  },
+  "B0BDLH7K67": {
+    "asin": "B0BDLH7K67",
+    "title_short": "Gieury Expandable Extra Large Carry On Travel Backpack",
+    "was": 73.99,
+    "now": 42.4,
+    "pct": 43,
+    "link": "https://www.amazon.ca/dp/B0BDLH7K67?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Price can vary by size and colour.",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b0bdlh7k67-gieury-expandable-extra-large-carry-on-travel-backpack"
+  },
+  "B09JVQQ99K": {
+    "asin": "B09JVQQ99K",
+    "title_short": "Litfun Women's Fuzzy Memory Foam Slippers",
+    "was": 37.99,
+    "now": 26.99,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B09JVQQ99K?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Price can vary by size and colour.",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b09jvqq99k-litfun-women-s-fuzzy-memory-foam-slippers"
+  },
+  "B01MR32LQT": {
+    "asin": "B01MR32LQT",
+    "title_short": "RockDove Men's Original Two-Tone Memory Foam Slipper",
+    "was": 32.99,
+    "now": 26.39,
+    "pct": 20,
+    "link": "https://www.amazon.ca/dp/B01MR32LQT?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "Price can vary by size and colour.",
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "slug": "b01mr32lqt-rockdove-men-s-original-two-tone-memory-foam-slipper"
   }
 }
