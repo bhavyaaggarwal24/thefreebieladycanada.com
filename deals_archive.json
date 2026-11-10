@@ -2429,16 +2429,15 @@
   },
   "B0FJJ3517W": {
     "asin": "B0FJJ3517W",
-    "title_short": "Ring Wired Doorbell 2K",
-    "was": 109.98,
+    "title_short": "Ring Wired Doorbell 2K (newest model)",
+    "was": 109.99,
     "now": 54.99,
     "pct": 50,
     "link": "https://www.amazon.ca/dp/B0FJJ3517W?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
     "coupon_note": "",
     "first_seen": "2026-09-24",
-    "last_seen": "2026-09-25",
-    "slug": "b0fjj3517w-ring-wired-doorbell-2k",
-    "ended": "2026-10-09"
+    "last_seen": "2026-11-10",
+    "slug": "b0fjj3517w-ring-wired-doorbell-2k"
   },
   "B0CN92YYPM": {
     "asin": "B0CN92YYPM",
@@ -4068,16 +4067,15 @@
   },
   "B0852913V2": {
     "asin": "B0852913V2",
-    "title_short": "Conair 1875W Hair Dryer",
+    "title_short": "Conair 318RC 1875 Watt Mid-Size Hair Dryer",
     "was": 24.97,
-    "now": 15.16,
-    "pct": 39,
+    "now": 11.86,
+    "pct": 53,
     "link": "https://www.amazon.ca/dp/B0852913V2?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
-    "coupon_note": "Prime member price",
+    "coupon_note": "",
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-06",
-    "slug": "b0852913v2-conair-1875w-hair-dryer",
-    "ended": "2026-10-09"
+    "last_seen": "2026-11-10",
+    "slug": "b0852913v2-conair-1875w-hair-dryer"
   },
   "B0989JLFGW": {
     "asin": "B0989JLFGW",
@@ -7884,5 +7882,53 @@
     "first_seen": "2026-11-09",
     "last_seen": "2026-11-09",
     "slug": "b0b8s1gjq8-megawise-3-5l-top-fill-ultrasonic-cool-mist-humidifier"
+  },
+  "B0B1N6QK7Z": {
+    "asin": "B0B1N6QK7Z",
+    "title_short": "Blink Outdoor 4 Wireless Smart Security Camera",
+    "was": 94.99,
+    "now": 32.99,
+    "pct": 65,
+    "link": "https://www.amazon.ca/dp/B0B1N6QK7Z?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "slug": "b0b1n6qk7z-blink-outdoor-4-wireless-smart-security-camera"
+  },
+  "B0F69ZQS82": {
+    "asin": "B0F69ZQS82",
+    "title_short": "Braun MultiQuick 5 Vario Hand Blender, 21-Speed",
+    "was": 79.99,
+    "now": 44.99,
+    "pct": 44,
+    "link": "https://www.amazon.ca/dp/B0F69ZQS82?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "slug": "b0f69zqs82-braun-multiquick-5-vario-hand-blender-21-speed"
+  },
+  "B01MRX9US8": {
+    "asin": "B01MRX9US8",
+    "title_short": "Crest 3D Whitestrips Vivid White Kit, 10 Treatments",
+    "was": 34.99,
+    "now": 24.66,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B01MRX9US8?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "slug": "b01mrx9us8-crest-3d-whitestrips-vivid-white-kit-10-treatments"
+  },
+  "B0CTP1XHBX": {
+    "asin": "B0CTP1XHBX",
+    "title_short": "JBL Clip 5 Portable Waterproof Bluetooth Speaker",
+    "was": 99.98,
+    "now": 69.98,
+    "pct": 30,
+    "link": "https://www.amazon.ca/dp/B0CTP1XHBX?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "slug": "b0ctp1xhbx-jbl-clip-5-portable-waterproof-bluetooth-speaker"
   }
 }
