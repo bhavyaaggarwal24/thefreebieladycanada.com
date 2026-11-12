@@ -5184,16 +5184,15 @@
   },
   "B0CSDVLYVS": {
     "asin": "B0CSDVLYVS",
-    "title_short": "Pampers Swaddlers Size 2, 144 ct",
+    "title_short": "Pampers Swaddlers Diapers, Size 2, 144 Count",
     "was": 39.99,
-    "now": 29.99,
-    "pct": 25,
+    "now": 24.97,
+    "pct": 38,
     "link": "https://www.amazon.ca/dp/B0CSDVLYVS?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
-    "coupon_note": "Prime member price \u2014 sign in with Prime to see it",
+    "coupon_note": "",
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-08",
-    "slug": "b0csdvlyvs-pampers-swaddlers-size-2-144-ct",
-    "ended": "2026-10-09"
+    "last_seen": "2026-11-12",
+    "slug": "b0csdvlyvs-pampers-swaddlers-size-2-144-ct"
   },
   "B0FXNLYCT2": {
     "asin": "B0FXNLYCT2",
@@ -7990,5 +7989,65 @@
     "first_seen": "2026-11-12",
     "last_seen": "2026-11-12",
     "slug": "b079kktvsw-mega-bloks-first-builders-abc-musical-train"
+  },
+  "B085XRS7KP": {
+    "asin": "B085XRS7KP",
+    "title_short": "Royale Velour Toilet Paper, 12 Rolls = 24 Rolls",
+    "was": 8.99,
+    "now": 6.0,
+    "pct": 33,
+    "link": "https://www.amazon.ca/dp/B085XRS7KP?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "slug": "b085xrs7kp-royale-velour-toilet-paper-12-rolls-24-rolls"
+  },
+  "B09LD8PTNJ": {
+    "asin": "B09LD8PTNJ",
+    "title_short": "Philips Sonicare 2100 Rechargeable Electric Toothbrush",
+    "was": 42.99,
+    "now": 24.96,
+    "pct": 42,
+    "link": "https://www.amazon.ca/dp/B09LD8PTNJ?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "slug": "b09ld8ptnj-philips-sonicare-2100-rechargeable-electric-toothbrush"
+  },
+  "B0817C8W7Z": {
+    "asin": "B0817C8W7Z",
+    "title_short": "Finish Quantum Ultimate Dishwasher Detergent Pods, 72 Tabs",
+    "was": 27.99,
+    "now": 20.0,
+    "pct": 29,
+    "link": "https://www.amazon.ca/dp/B0817C8W7Z?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "slug": "b0817c8w7z-finish-quantum-ultimate-dishwasher-detergent-pods-72-tabs"
+  },
+  "B0BNWCTNYN": {
+    "asin": "B0BNWCTNYN",
+    "title_short": "Tide Original Liquid Laundry Detergent, 3.9 L",
+    "was": 24.99,
+    "now": 19.97,
+    "pct": 20,
+    "link": "https://www.amazon.ca/dp/B0BNWCTNYN?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "slug": "b0bnwctnyn-tide-original-liquid-laundry-detergent-3-9-l"
+  },
+  "B0035LCFNQ": {
+    "asin": "B0035LCFNQ",
+    "title_short": "Duracell Coppertop AA Batteries, 24 Count",
+    "was": 25.99,
+    "now": 19.98,
+    "pct": 23,
+    "link": "https://www.amazon.ca/dp/B0035LCFNQ?tag=thefreebiel04-20&linkCode=ll1&language=en_CA",
+    "coupon_note": "",
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "slug": "b0035lcfnq-duracell-coppertop-aa-batteries-24-count"
   }
 }
